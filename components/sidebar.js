@@ -14,6 +14,9 @@ export default function Sidebar() {
         <span className={styles.link}>Trade</span>
       </Link>
       <Link href="/" passHref>
+        <span className={styles.link}>NFTs</span>
+      </Link>
+      <Link href="/" passHref>
         <span className={styles.link}>Explore</span>
       </Link>
       <Link href="/" passHref>

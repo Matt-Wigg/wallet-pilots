@@ -27,7 +27,7 @@
   margin: 5px;
   border-radius: 1rem;
   min-width: 125px;
-  max-width: 150px;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -36,10 +36,9 @@
   padding: 0.5rem;
   background-color:rgb(53, 80, 186);
   border: 0.5px solid rgba(137, 136, 136, 0.517);
-  margin: 5px;
-  border-radius: 1rem;
-  min-width: 125px;
-  max-width: 150px;
+  border-radius: 0.25rem;
+  min-width: 200px;
+  max-width: 200px;
   text-align: center;
 }
 
