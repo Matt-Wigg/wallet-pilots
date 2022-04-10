@@ -5,26 +5,19 @@ export default function Sidebar() {
   return (
     <nav className={styles.sidebar}>
       <Link href="/" passHref>
-        <span className={styles.logo}>LOGO</span>
+        <span className={styles.logo}>Wallet Pilot</span>
       </Link>
       <Link href="/" passHref>
-        <span className={styles.link}>Home Base</span>
+        <span className={styles.link}>Assets</span>
       </Link>
-      <Link href="/surrealestates" passHref>
-        <span className={styles.link}>Dealers</span>
+      <Link href="/" passHref>
+        <span className={styles.link}>Trade</span>
       </Link>
-      <Link href="/surrealestates" passHref>
-        <span className={styles.link}>Estates</span>
+      <Link href="/" passHref>
+        <span className={styles.link}>Explore</span>
       </Link>
-      <span className={styles.link}>👀 Soon</span>
-      <Link href="/surrealestates" passHref>
-        <span className={styles.linkAbout}>Shuttle Passes</span>
-      </Link>
-      <Link href="/surrealestates" passHref>
-        <span className={styles.linkAbout}>Starchart</span>
-      </Link>
-      <Link href="/surrealestates" passHref>
-        <span className={styles.linkAbout}>Crew</span>
+      <Link href="/" passHref>
+        <span className={styles.link}>More</span>
       </Link>
     </nav>
   );

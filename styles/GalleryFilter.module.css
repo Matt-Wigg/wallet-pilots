@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 200px;
+  height: auto;
   width: 100%;
   background-color: rgba(137, 136, 136, 0.207);
   color: white;

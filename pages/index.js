@@ -5,13 +5,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="PPA Home" />
+        <title>Wallet Pilot</title>
+        <meta name="description" content="Wallet Pilot" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        Static Landing: 🎶 / 🚀 / 💸 / 📰 / 🩸
-      </main>
     </div>
   )
 }
