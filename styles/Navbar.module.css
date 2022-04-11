@@ -9,10 +9,10 @@
   top: 0px;
   right: 0px;
   z-index: 2;
-  margin-left: 180px;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: flex-end;
+  align-items: center;
   min-height: 68px;
   max-height: 68px;
   background-color: rgb(0, 0, 0);
@@ -34,20 +34,44 @@
 .linkConnect {
   display: inline-block;
   padding: 0.5rem;
-  background-color:rgb(53, 80, 186);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color:#c71992;
   border: 0.5px solid rgba(137, 136, 136, 0.517);
   border-radius: 0.25rem;
   min-width: 200px;
-  max-width: 200px;
+  max-width: 300px;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+}
+
+.linkDisconnect {
+  display: inline-block;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color:#68074b;
+  border: 0.5px solid rgba(137, 136, 136, 0.517);
+  border-radius: 0.25rem;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
 }
 
 .link:hover {
-  background-color: rgba(185, 134, 5, 0.656);
+  background-color: #f07800;
   cursor: pointer;
 }
 
 .linkConnect:hover {
-  background-color:rgb(68, 96, 208);
+  background-color:#e740b5;
+  cursor: pointer;
+}
+
+.linkDisconnect:hover {
+  background-color:#810e5e;
   cursor: pointer;
 }

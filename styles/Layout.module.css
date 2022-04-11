@@ -1,3 +1,9 @@
 .layout {
-  height: calc(100vh - 136px);
+  height: calc(100vh - 68px);
+}
+
+.main { 
+  height: 100%;
+  margin-top: 68px;
+  margin-left: 180px;
 }

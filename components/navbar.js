@@ -19,7 +19,7 @@ export default function Navbar() {
       {!active && <span className={styles.linkConnect} onClick={handleConnect}>
         CONNECT WALLET
       </span>}
-      {active && <span className={styles.linkConnect} onClick={handleDisconnect}>
+      {active && <span className={styles.linkDisconnect} onClick={handleDisconnect}>
         DISCONNECT WALLET
       </span>}
     </nav>
