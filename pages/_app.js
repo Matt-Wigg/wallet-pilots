@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import Layout from '../components/layout';
-import { ethers } from "ethers";
 import { Web3Provider } from "@ethersproject/providers";
 import { Web3ReactProvider } from "@web3-react/core";
 
