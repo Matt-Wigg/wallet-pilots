@@ -7,7 +7,6 @@ export default function Navbar() {
   const { activate, deactivate, active } = useWeb3React();
 
   const handleConnect = () => {
-    launchModel();
     activate(connectors.injected);
   };
 
