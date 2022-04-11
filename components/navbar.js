@@ -1,12 +1,13 @@
-import styles from "../styles/Navbar.module.css";
-
 import { useWeb3React } from "@web3-react/core";
 import { connectors } from "../utilities/connectors";
+
+import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {
   const { activate, deactivate, active } = useWeb3React();
 
   const handleConnect = () => {
+    launchModel();
     activate(connectors.injected);
   };
 
