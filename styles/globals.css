@@ -39,6 +39,11 @@ li {
   align-items: center;
 }
 
+h1 {
+  padding-top: 1rem;
+  margin: 0;
+}
+
 :root {
   --colorShadeA: rgb(106, 112, 163);
   --colorShadeB: rgb(60, 65, 112);
