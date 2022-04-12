@@ -5,11 +5,13 @@ body {
   font-family: Poppins, Helvetica, system-ui, -apple-system, BlinkMacSystemFont,
     segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif,
     apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
-  background-color: #1f2029;
+  background: #1A1A1D;
   line-height: 2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
+  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -19,4 +21,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+:root {
+  --colorShadeA: rgb(106, 112, 163);
+  --colorShadeB: rgb(60, 65, 112);
+  --colorShadeC: rgb(44, 54, 140);
+  --colorShadeD: rgb(34, 48, 157);
+  --colorShadeE: rgb(41, 32, 128);
 }

@@ -1,13 +1,15 @@
 .footer {
   display: flex;
-  padding: 1rem;
-  min-height: 68px;
-  max-height: 68px;
+  flex: 1 1 auto;
+  padding: 16px 24px;
+  min-height: 35px;
+  max-height: 50px;
+  min-width: 400px;
   border-top: 0.5px solid rgba(137, 136, 136, 0.517);
   -webkit-box-pack: justify;
   justify-content: flex-end;
+  text-align: end;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  color: #696969;
+  color: #fff;
   transition: top 350ms ease 0s;
 }

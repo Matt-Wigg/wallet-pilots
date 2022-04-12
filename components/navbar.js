@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { connectors } from "../utilities/connectors";
 
@@ -5,23 +6,43 @@ import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {
   const { activate, deactivate, active } = useWeb3React();
+  const [disabled, setDisabled] = useState(false);
 
-  const handleConnect = () => {
-    activate(connectors.injected);
+  const handleConnect = (e) => {
+    setDisabled(true);
+    setTimeout(activate, 500, connectors.injected);
+    e.preventDefault();
+    setDisabled(false);
   };
 
-  const handleDisconnect = () => {
-    deactivate();
+  const handleDisconnect = (e) => {
+    setDisabled(false);
+    setTimeout(deactivate, 500);
+    e.preventDefault();
   };
 
   return (
     <nav className={styles.navbar}>
-      {!active && <span className={styles.linkConnect} onClick={handleConnect}>
-        CONNECT WALLET
-      </span>}
-      {active && <span className={styles.linkDisconnect} onClick={handleDisconnect}>
-        DISCONNECT WALLET
-      </span>}
+      <ul>
+        {!active && (
+          <button
+            className={styles.pureMaterialButton}
+            disabled={disabled}
+            onClick={(e) => handleConnect(e)}
+          >
+            CONNECT WALLET
+          </button>
+        )}
+        {active && (
+          <li
+            className={styles.pureMaterialButton}
+            disabled={disabled}
+            onClick={handleDisconnect}
+          >
+            DISCONNECT WALLET
+          </li>
+        )}
+      </ul>
     </nav>
   );
 }

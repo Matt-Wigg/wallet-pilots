@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useWeb3React } from "@web3-react/core";
 
 const Home = () => {
-  const { account, chainId } = useWeb3React();
+  const { account, chainId, library } = useWeb3React();
   return (
     <div className={styles.container}>
       <Head>
