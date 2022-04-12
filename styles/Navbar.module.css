@@ -4,15 +4,21 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 225px;
+  width: auto;
   height: 100%;
-  transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   margin: 0 auto;
   color: #fff;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    position: relative;
+    border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+  }
 }
 
 .pureMaterialButton {
@@ -22,9 +28,10 @@
   box-sizing: border-box;
   border: none;
   border-radius: 4px;
-  height: 36px;
   vertical-align: middle;
   text-align: center;
+  min-width: 200px;
+  max-height: 36px;
   text-overflow: ellipsis;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
@@ -39,6 +46,8 @@
   overflow: hidden;
   outline: none;
   cursor: pointer;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   transition: box-shadow 0.2s;
   transition: transform 0.5s;
 }

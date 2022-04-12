@@ -1,14 +1,15 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { useWeb3React } from "@web3-react/core";
 
 import Typing from "../components/typing";
 
+import styles from "../styles/Home.module.css";
+
 const Home = () => {
-  const { account, chainId, library } = useWeb3React();
+  const { account, chainId } = useWeb3React();
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
       <Head>
         <title>Wallet Pilot</title>
         <meta name="description" content="Wallet Pilot" />

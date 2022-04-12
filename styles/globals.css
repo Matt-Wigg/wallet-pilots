@@ -1,7 +1,5 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: Poppins, Helvetica, system-ui, -apple-system, BlinkMacSystemFont,
     segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif,
     apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
@@ -11,6 +9,7 @@ body {
   font-size: 14px;
   height: 100%;
   width: 100%;
+  color:white;
 }
 
 a {
@@ -20,6 +19,11 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 ul {

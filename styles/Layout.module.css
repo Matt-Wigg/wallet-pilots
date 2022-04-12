@@ -1,10 +1,16 @@
 .layout {
-  height: calc(100vh - 50px);
   margin-left: 225px;
 }
 
-.main { 
-  height: 100%;
+.main {
+  height: 100vw !important;
+  height: auto;
   display: flex;
   flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    margin: 0;
+  }
 }
