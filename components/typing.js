@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-const words = [
-  "a web3 project by SoftwareGuy.eth ",
-  "a connection to the blockchain ",
-  "your new favorite app :) ",
-  "a way to send digital currency ",
-  "the company private key is ",
-  "oops... nearly! ",
-  "a way to manage your NFTs ",
-  "your digital asset portfolio manager ",
-];
-
 import style from "../styles/Typing.module.css";
+
+const words = [
+  "a Web3 project by SoftwareGuy.eth ",
+  "a way to connect to the blockchain ",
+  "your new favorite dApp :) ",
+  "manage your digital assets ",
+  "the company private key is",
+  "oops... nearly! ",
+  "an NFT portfolio manager ",
+  "maximize your digital assets ",
+];
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -51,13 +51,11 @@ export default function Home() {
   }, [blink]);
 
   return (
-    <>
       <h1>
         <span className={style.walletPilot}>Wallet Pilot: </span>
         <span className={style.typeWriter}>
           {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
         </span>
       </h1>
-    </>
   );
 }

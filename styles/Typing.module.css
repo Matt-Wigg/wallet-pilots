@@ -1,11 +1,13 @@
 .typeWriter {
   color: white;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
+  letter-spacing: 0.1rem;
 }
 
 .walletPilot {
   color: rgb(217, 50, 214);
   font-size: 48px;
   font-weight: 700;
+  letter-spacing: 0.1rem;
 }
