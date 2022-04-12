@@ -13,7 +13,6 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Welcome To Wallet Pilot</h1>
-      <i>in development...</i>
       <h2>Connect your wallet for a little more info:</h2>
       {account && <p>{`Your account is ${account}`}</p>}
       {chainId && <p>{`Your ChainID is ${chainId}`}</p>}

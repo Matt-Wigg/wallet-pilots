@@ -23,25 +23,26 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
+      {!active && (
+        <button
+          className={styles.pureMaterialButton}
+          disabled={disabled}
+          onClick={(e) => handleConnect(e)}
+        >
+          CONNECT WALLET
+        </button>
+      )}
+      {active && (
+        <button
+          className={styles.pureMaterialButton}
+          disabled={disabled}
+          onClick={handleDisconnect}
+        >
+          DISCONNECT WALLET
+        </button>
+      )}
       <ul>
-        {!active && (
-          <button
-            className={styles.pureMaterialButton}
-            disabled={disabled}
-            onClick={(e) => handleConnect(e)}
-          >
-            CONNECT WALLET
-          </button>
-        )}
-        {active && (
-          <li
-            className={styles.pureMaterialButton}
-            disabled={disabled}
-            onClick={handleDisconnect}
-          >
-            DISCONNECT WALLET
-          </li>
-        )}
+        <li>in development...</li>
       </ul>
     </nav>
   );

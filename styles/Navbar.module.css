@@ -6,8 +6,11 @@
   bottom: 0;
   width: 225px;
   height: 100%;
-  padding: 20px 0;
   transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: #fff;
 }
 
 .pureMaterialButton {
@@ -25,8 +28,10 @@
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   background-color: rgb(217, 50, 214);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
+    -apple-system;
   font-size: 14px;
   font-weight: 500;
   line-height: 36px;
@@ -73,7 +78,8 @@
 /* Hover, Focus */
 .pureMaterialButton:hover,
 .pureMaterialButton:focus {
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: transform 0.5s;
 }
 
@@ -91,7 +97,8 @@
 
 /* Active */
 .pureMaterialButton:active {
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .pureMaterialButton:active::after {
