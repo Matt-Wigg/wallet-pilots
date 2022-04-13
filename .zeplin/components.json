@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-react-plugin"
+    }
+  ],
+  "styleguides": [
+    "625646eafbca1b21de21511d"
+  ],
+  "components": [
+    {
+      "path": "components/button.js",
+      "zeplinIds": [
+        "625649664db2df22771c849c"
+      ]
+    },
+    {
+      "path": "components/button/button.js",
+      "zeplinIds": [
+        "62564968cd2845246f91e7d2"
+      ]
+    }
+  ],
+  "github": {
+    "repository": "Matt-Wigg/wallet-pilot"
+  }
+}

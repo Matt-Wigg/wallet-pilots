@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "zeplin-connect": "zeplin connect",
+    "zeplin-connect-dev-mode": "zeplin connect --dev"
   },
   "dependencies": {
     "@ensdomains/react-ens-address": "^0.0.31",
@@ -21,6 +23,8 @@
     "web3": "^1.7.3"
   },
   "devDependencies": {
+    "@zeplin/cli": "2.0.0",
+    "@zeplin/cli-connect-react-plugin": "1.1.1",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4"
   }
