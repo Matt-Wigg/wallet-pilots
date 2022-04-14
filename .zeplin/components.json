@@ -5,19 +5,13 @@
     }
   ],
   "styleguides": [
-    "625646eafbca1b21de21511d"
+    "62565e1ed62b4c22b6cfa468"
   ],
   "components": [
     {
-      "path": "components/button.js",
-      "zeplinIds": [
-        "625649664db2df22771c849c"
-      ]
-    },
-    {
       "path": "components/button/button.js",
       "zeplinIds": [
-        "62564968cd2845246f91e7d2"
+        "62565e43ccfd3324bf987f0c"
       ]
     }
   ],

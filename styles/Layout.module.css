@@ -1,9 +1,9 @@
 .layout {
-  margin-left: 225px;
+  margin-left: 250px;
 }
 
 .main {
-  height: 100vw !important;
+  min-height: 50vw !important;
   height: auto;
   display: flex;
   flex: 1 1 auto;

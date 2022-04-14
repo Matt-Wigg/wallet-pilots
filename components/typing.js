@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import style from "../styles/Typing.module.css";
 
 const words = [
-  "a Web3 project by SoftwareGuy.eth ",
+  "a Web3 project ",
   "a way to connect to the blockchain ",
   "your new favorite dApp :) ",
   "manage your digital assets ",
@@ -51,7 +51,7 @@ export default function Home() {
   }, [blink]);
 
   return (
-      <h1>
+      <h1 className={style.header}>
         <span className={style.walletPilot}>Wallet Pilot: </span>
         <span className={style.typeWriter}>
           {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}

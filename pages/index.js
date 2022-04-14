@@ -16,9 +16,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Typing />
-      <p>Connect your wallet for a little more info:</p>
-      {account && <p>{`Your account is ${account}`}</p>}
-      {chainId && <p>{`Your ChainID is ${chainId}`}</p>}
+      <div className={styles.walletInfo}>
+        {account && <p>{`Your  Address: ${account}`}</p>}
+        {chainId && <p>{`Current chainId: ${chainId}`}</p>}
+      </div>
     </div>
   );
 };

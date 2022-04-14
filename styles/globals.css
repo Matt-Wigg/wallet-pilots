@@ -30,20 +30,18 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding-top: 2rem;
   list-style-type: none;
 }
 
 li {
-  padding: 10px;
-  margin: 0 auto;
-  flex-shrink: 0;
   display: flex;
+  padding-bottom: 2rem;
   align-items: center;
 }
 
 h1 {
-  padding-top: 1rem;
+  padding-top: 2rem;
   margin: 0;
 }
 
