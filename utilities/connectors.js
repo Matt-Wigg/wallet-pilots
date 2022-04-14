@@ -13,7 +13,8 @@ const walletConnect = new WalletConnectConnector({
 const coinbaseWallet = new WalletLinkConnector({
   url: `https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_KEY}`,
   appName: "Wallet Pilot",
-})
+  supportedChainIds: [1, 3, 4, 5, 42],
+ });
 
 export const connectors = {
   injected,

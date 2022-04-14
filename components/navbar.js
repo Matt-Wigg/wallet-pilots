@@ -4,19 +4,17 @@ import { connectors } from "../utilities/connectors";
 
 import styles from "../styles/Navbar.module.css";
 
-export default function Navbar() {
+export default function Navbar({ showModal }) {
   const { activate, deactivate, active } = useWeb3React();
   const [disabled, setDisabled] = useState(false);
 
   const handleConnect = (e) => {
-    setDisabled(true);
-    setTimeout(activate, 500, connectors.injected);
-    e.preventDefault();
-    setDisabled(false);
+    showModal(true);
   };
 
   const handleDisconnect = (e) => {
     setDisabled(false);
+    showModal(false);
     setTimeout(deactivate, 500);
     e.preventDefault();
   };
@@ -25,8 +23,6 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       {!active && (
         <button
-          className={styles.pureMaterialButton}
-          disabled={disabled}
           onClick={(e) => handleConnect(e)}
         >
           CONNECT WALLET
@@ -34,7 +30,6 @@ export default function Navbar() {
       )}
       {active && (
         <button
-          className={styles.pureMaterialButton}
           disabled={disabled}
           onClick={handleDisconnect}
         >
