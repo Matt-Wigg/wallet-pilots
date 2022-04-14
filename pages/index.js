@@ -40,7 +40,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className={style.walletInfo}>
+      <div className={style.ethereum}>
         {account && <p>{`Your  Address: ${account}`}</p>}
         {chainId && <p>{`Current chainId: ${chainId}`}</p>}
       </div>
