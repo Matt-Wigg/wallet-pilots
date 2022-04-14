@@ -35,7 +35,7 @@ const Home = () => {
           <div className={style.walletInfo}>
             <p>
               Please visit{" "}
-              <a className={style.ethereumDetail} href="https://ethereumDetail.org/">
+              <a className={style.ethereumDetail} href="https://ethereum.org/">
                 www.ethereum.org
               </a>{" "}
               to learn more about Ethereum, wallets, smart contracts,
