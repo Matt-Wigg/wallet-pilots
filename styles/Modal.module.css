@@ -5,7 +5,8 @@
   transform: translate(-50%, -50%);
   z-index: 1; 
   overflow: auto; 
-  width: 30vw;
+  width: 40vw;
+  max-width: 400px;
   height: 45vh;
   background-color: #1A1A1D;
   animation:fadeIn 0.25s;
@@ -13,14 +14,23 @@
   border: 1px solid rgba(137, 136, 136, 0.517);
   padding-right: 2rem;
   padding-left: 2rem;
+  padding-top: 2rem;
+
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
+  justify-content: space-between;
+  height: 60%;
+}
+
+.close {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 4rem;
 }
 
 @keyframes fadeIn {
@@ -36,6 +46,18 @@
   .modal {
     width: 90vw;
   }
+}
+
+.metaMask {
+  background-color: #d77315;
+}
+
+.walletConnect {
+  background-color: #207ffc;
+}
+
+.coinBase {
+  background-color: #3673f5;
 }
 
 .closeModal {

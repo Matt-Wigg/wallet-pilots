@@ -9,6 +9,7 @@
 
 .walletInfo {
   padding-top: 1rem;
+  min-height: 25vh;
 }
 
 .ethereumDetail {

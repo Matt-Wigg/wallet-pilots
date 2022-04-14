@@ -22,24 +22,30 @@ export default function Modal({ showModal }) {
   return (
     <div className={style.modal}>
       <div className={style.container}>
+        <h1>Select Your Wallet</h1>
         <button
-          type="submit"
-          onClick={(e) => connectWallet(e, connectors.injected)}
-        >
-          Meta Mask
-        </button>
-        <button
+          className={style.coinBase}
           type="submit"
           onClick={(e) => connectWallet(e, connectors.coinbaseWallet)}
         >
           Coinbase
         </button>
         <button
+          className={style.metaMask}
+          type="submit"
+          onClick={(e) => connectWallet(e, connectors.injected)}
+        >
+          Meta Mask
+        </button>
+        <button
+          className={style.walletConnect}
           type="submit"
           onClick={(e) => connectWallet(e, connectors.walletConnect)}
         >
           Wallet Connect
         </button>
+      </div>
+      <div className={style.close}>
         <button className={style.closeModal} type="submit" onClick={closeModal}>
           Close
         </button>
