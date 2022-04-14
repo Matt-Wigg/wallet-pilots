@@ -41,6 +41,7 @@ li {
   padding-bottom: 2rem;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 h1 {
@@ -58,7 +59,7 @@ h2 {
 }
 
 p {
-  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 :root {

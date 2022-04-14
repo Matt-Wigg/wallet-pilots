@@ -11,6 +11,10 @@
   padding-top: 1rem;
 }
 
-.ethereum {
+.ethereumDetail {
   color: rgb(217, 50, 214);
+}
+
+.ethereumContainer {
+  padding-top: 1rem;
 }

@@ -16,34 +16,49 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Typing />
-      <div className={style.walletInfo}>
+      <div>
         <h1>
-          Welcome to <span className={style.ethereum}>Wallet Pilot</span>
+          Welcome to <span className={style.ethereumDetail}>Wallet Pilot</span>
         </h1>
-        <h2>Getting started</h2>
-        <p>
-          To utilize Wallet Pilot&apos;s functional and analytical capabilities,
-          you require an Ethereum wallet.
-        </p>
-        <p>
-          If you already own an Etherium wallet, use it to connect to Wallet
-          Pilot via the connect wallet button.
-        </p>
+      </div>
+      {!account && !chainId ? (
         <div className={style.walletInfo}>
+          <h2>Getting started</h2>
           <p>
-            Please visit{" "}
-            <a className={style.ethereum} href="https://ethereum.org/">
-              www.ethereum.org
-            </a>{" "}
-            to learn more about Ethereum, wallets, smart contracts,
-            cryptocurrency, and other cool things.{" "}
+            To utilize Wallet Pilot&apos;s functional and analytical
+            capabilities, you require an EthereumDetail wallet.
           </p>
+          <p>
+            If you already own an Etherium wallet, use it to connect to Wallet
+            Pilot via the connect wallet button.
+          </p>
+          <div className={style.walletInfo}>
+            <p>
+              Please visit{" "}
+              <a className={style.ethereumDetail} href="https://ethereumDetail.org/">
+                www.ethereumDetail.org
+              </a>{" "}
+              to learn more about EthereumDetail, wallets, smart contracts,
+              cryptocurrency, and other cool things.{" "}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={style.walletInfo}>
-        {account && <p>{`Your  Address: ${account}`}</p>}
-        {chainId && <p>{`Current chainId: ${chainId}`}</p>}
-      </div>
+      ) : (
+        <div className={style.walletInfo}>
+          {account && (
+            <div>
+              <h2>Your Address:</h2>
+              <p className={style.ethereumDetail}>{account}</p>
+            </div>
+          )}
+          {chainId && (
+            <div className={style.ethereumContainer}>
+              <h2>Current chainId:</h2>
+              <p className={style.ethereumDetail}>{chainId}</p>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
