@@ -26,7 +26,7 @@ const Home = () => {
           <h2>Getting started</h2>
           <p>
             To utilize Wallet Pilot&apos;s functional and analytical
-            capabilities, you require an EthereumDetail wallet.
+            capabilities, you require an Ethereum wallet.
           </p>
           <p>
             If you already own an Etherium wallet, use it to connect to Wallet
@@ -36,9 +36,9 @@ const Home = () => {
             <p>
               Please visit{" "}
               <a className={style.ethereumDetail} href="https://ethereumDetail.org/">
-                www.ethereumDetail.org
+                www.ethereum.org
               </a>{" "}
-              to learn more about EthereumDetail, wallets, smart contracts,
+              to learn more about Ethereum, wallets, smart contracts,
               cryptocurrency, and other cool things.{" "}
             </p>
           </div>
