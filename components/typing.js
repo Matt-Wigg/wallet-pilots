@@ -52,9 +52,9 @@ export default function Home() {
 
   return (
       <h1 className={style.header}>
-        <span className={style.walletPilot}>Wallet Pilot: </span>
+        <span className={style.walletPilot}>Wallet Pilot</span> 
         <span className={style.typeWriter}>
-          {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
+          {` = ${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
         </span>
       </h1>
   );

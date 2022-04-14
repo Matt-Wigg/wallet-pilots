@@ -43,7 +43,6 @@ export default function Navbar() {
       )}
       <ul>
         <li>Connect your wallet for a little more info</li>
-        <li>in development...</li>
       </ul>
     </nav>
   );

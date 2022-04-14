@@ -41,8 +41,21 @@ li {
 }
 
 h1 {
-  padding-top: 2rem;
   margin: 0;
+  padding-bottom: 1.5rem;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  padding-top: 0.5rem;
 }
 
 :root {
