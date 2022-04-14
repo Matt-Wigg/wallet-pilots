@@ -13,7 +13,7 @@ const Home = () => {
       <Head>
         <title>Wallet Pilot</title>
         <meta name="description" content="Wallet Pilot" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/metamask-icon.svg" />
       </Head>
       <Typing />
       <div>
