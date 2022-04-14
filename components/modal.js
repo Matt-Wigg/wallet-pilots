@@ -35,7 +35,7 @@ export default function Modal({ showModal }) {
           type="submit"
           onClick={(e) => connectWallet(e, connectors.injected)}
         >
-          Meta Mask
+          MetaMask
         </button>
         <button
           className={style.walletConnect}
