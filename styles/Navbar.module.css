@@ -20,6 +20,8 @@
   .navbar {
     position: relative;
     border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+    max-width: 100%;
+    border-right: 0;
   }
 }
 
