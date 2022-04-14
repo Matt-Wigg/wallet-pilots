@@ -33,14 +33,14 @@ const Home = () => {
           <p>
             Please visit{" "}
             <a className={style.ethereum} href="https://ethereum.org/">
-              www.ethereum.org/
+              www.ethereum.org
             </a>{" "}
             to learn more about Ethereum, wallets, smart contracts,
             cryptocurrency, and other cool things.{" "}
           </p>
         </div>
       </div>
-      <div className={style.ethereum}>
+      <div className={style.walletInfo}>
         {account && <p>{`Your  Address: ${account}`}</p>}
         {chainId && <p>{`Current chainId: ${chainId}`}</p>}
       </div>
