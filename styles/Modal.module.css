@@ -5,12 +5,14 @@
   transform: translate(-50%, -50%);
   z-index: 1; 
   overflow: auto; 
-  width: 60vw;
+  width: 30vw;
   height: 45vh;
   background-color: #1A1A1D;
   animation:fadeIn 0.25s;
   border-radius: 8px;
   border: 1px solid rgba(137, 136, 136, 0.517);
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .container {
@@ -37,5 +39,9 @@
 }
 
 .closeModal {
-  background-color: rgb(50, 217, 122);
+  background-color: #414143;
+}
+
+.logo {
+  margin-right: 1rem;
 }
