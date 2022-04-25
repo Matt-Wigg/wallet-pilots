@@ -20,12 +20,12 @@ const Home = () => {
       <Typing />
       <div className={style.detail}> 
         <h1>See you all soon 💎✈🔮</h1>
-        <p><i>&rdquo;If we all worked on the assumption that what is accepted as true is really true, there would be little hope of advance.&rdquo; - Orville Wright</i></p>
+        <p>&rdquo;If we all worked on the assumption that what is accepted as true is really true, <br/>there would be little hope of advance.&rdquo; - <i>Orville Wright</i></p>
         {account && (
         <div>
           <div className={style.ethereumContainer} />
           <div className={style.ethereumContainer} />
-          <h2>We just show you this... for now 👀</h2>
+          <h2>I&apos;ll just show you this, for now... 👀</h2>
           <p>
             Current address:{" "}
             <span className={style.ethereumDetail}>{account}</span>
