@@ -31,17 +31,14 @@ ul {
   flex-direction: column;
   margin: 0;
   padding-top: 2rem;
-  justify-content: center;
-  align-self: center;
   list-style-type: none;
+  width: 100%;
 }
 
 li {
   display: flex;
   padding-bottom: 2rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  margin: 0;
 }
 
 h1 {
@@ -62,19 +59,11 @@ p {
   padding-bottom: 0.5rem;
 }
 
-:root {
-  --colorShadeA: rgb(106, 112, 163);
-  --colorShadeB: rgb(60, 65, 112);
-  --colorShadeC: rgb(44, 54, 140);
-  --colorShadeD: rgb(34, 48, 157);
-  --colorShadeE: rgb(41, 32, 128);
-}
 
 button {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  border: none;
   border-radius: 4px;
   vertical-align: middle;
   text-align: center;
@@ -91,32 +80,12 @@ button {
   font-weight: 500;
   line-height: 36px;
   overflow: hidden;
-  outline: none;
   cursor: pointer;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   transition: box-shadow 0.2s;
   transition: transform 0.5s;
   width: 100%;
-}
-
-
-button::-moz-focus-inner {
-  border: none;
-}
-
-/* Overlay */
-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
-  opacity: 0;
-  transition: opacity 0.2s;
-  outline: none;
 }
 
 /* Ripple */
@@ -129,31 +98,17 @@ button::after {
   padding: 50%;
   width: 32px; 
   height: 32px; 
-  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: rgb(255, 255, 255);
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition: opacity 1s, transform 0.5s;
 }
 
 /* Hover, Focus */
-button:hover,
-button:focus {
+button:hover {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: transform 0.5s;
-  
-}
-
-button:hover::before {
-  opacity: 0.08;
-}
-
-button:focus::before {
-  opacity: 0.24;
-}
-
-button:hover:focus::before {
-  opacity: 0.3;
 }
 
 /* Active */
@@ -166,18 +121,4 @@ button:active::after {
   opacity: 0.32;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0s;
-}
-
-/* Disabled */
-button:disabled {
-  box-shadow: none;
-  cursor: initial;
-}
-
-button:disabled::before {
-  opacity: 0;
-}
-
-button:disabled::after {
-  opacity: 0;
 }

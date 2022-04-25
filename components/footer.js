@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        made by SoftwareGuy.eth -- with ❤️
+        made by SoftwareGuy -- with ❤️
       </footer>
     </>
   );

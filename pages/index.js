@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useWeb3React } from "@web3-react/core";
 
 import Typing from "../components/typing";
+import AudioPlayer from "../components/audioPlayer/AudioPlayer";
 
 import style from "../styles/Home.module.css";
 
@@ -10,53 +11,38 @@ const Home = () => {
   const { account, chainId } = useWeb3React();
   return (
     <div className={style.main}>
+      <AudioPlayer />
       <Head>
         <title>Wallet Pilot</title>
         <meta name="description" content="Wallet Pilot" />
         <link rel="icon" href="/metamask-icon.svg" />
       </Head>
       <Typing />
+      <div></div>
       <div>
-        <h1>
-          Welcome to <span className={style.ethereumDetail}>Wallet Pilot</span>
-        </h1>
+        <h1>We&apos;ll see you all soon.</h1>
+        <p>
+          Wallet Pilot is a celebration towards the ideas of the future, and the
+          people who want to be a part of them.
+        </p>
       </div>
-      {!account && !chainId ? (
-        <div className={style.walletInfo}>
-          <h2>Getting started</h2>
+      {account && (
+        <div>
+          <div className={style.ethereumContainer} />
+          <div className={style.ethereumContainer} />
+          <h2>More coming soon:</h2>
           <p>
-            To utilize Wallet Pilot&apos;s functional and analytical
-            capabilities, you require an Ethereum wallet.
+            Current address:{" "}
+            <span className={style.ethereumDetail}>{account}</span>
           </p>
-          <p>
-            If you already own an Etherium wallet, use it to connect to Wallet
-            Pilot via the connect wallet button.
-          </p>
-          <div className={style.walletInfo}>
-            <p>
-              Please visit{" "}
-              <a className={style.ethereumDetail} href="https://ethereum.org/" target="_blank" rel="noopener noreferrer">
-                www.ethereum.org
-              </a>{" "}
-              to learn more about Ethereum, wallets, smart contracts,
-              cryptocurrency, and other cool things.{" "}
-            </p>
-          </div>
         </div>
-      ) : (
-        <div className={style.walletInfo}>
-          {account && (
-            <div>
-              <h2>Your Address:</h2>
-              <p className={style.ethereumDetail}>{account}</p>
-            </div>
-          )}
-          {chainId && (
-            <div className={style.ethereumContainer}>
-              <h2>Current chainId:</h2>
-              <p className={style.ethereumDetail}>{chainId}</p>
-            </div>
-          )}
+      )}
+      {chainId && (
+        <div>
+          <p>
+            Current chain id:{" "}
+            <span className={style.ethereumDetail}>{chainId}</span>
+          </p>
         </div>
       )}
     </div>

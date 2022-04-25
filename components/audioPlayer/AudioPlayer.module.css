@@ -1,0 +1,173 @@
+.auioContainer {
+  position: fixed;
+  display: block;
+  bottom: 6rem;
+  right: 2rem;
+  background-color: rgba(0, 0, 0, 0.16);
+  max-width: 400px;
+  min-width: 400px;
+  border-radius: 0.375rem;
+  transition-duration: 0.1s;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  animation: fadeIn 1s;
+  align-items: baseline;
+  border: 1px solid rgba(137, 136, 136, 0.517);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.audioDetail {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  transition-duration: 0.3s;
+  height: 100%;
+}
+
+.audioTitle {
+  font-size: 24px;
+}
+
+.audioSubTitle {
+  font-size: 10px;
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playerButton {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3); /* start by scaling to 30% */
+  }
+
+  30% {
+    transform: scaleY(1); /* scale up to 100% */
+  }
+
+  60% {
+    transform: scaleY(0.5); /* scale down to 50% */
+  }
+
+  80% {
+    transform: scaleY(0.75); /* scale up to 75% */
+  }
+
+  100% {
+    transform: scaleY(0.6); /* scale down to 60% */
+  }
+}
+
+.musicVisual {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top:0.5rem;
+  width: 3rem;
+  height: 1.75rem;
+  align-items: flex-end;
+}
+
+.musicBars {
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  transform-origin: bottom;
+  animation: bounce 2.2s ease infinite alternate;
+  content: "";
+}
+
+.musicBars:nth-of-type(2) {
+  animation-delay: -2.2s; /* Start at the end of animation */
+}
+
+.musicBars:nth-of-type(3) {
+  animation-delay: -3.7s; /* Start mid-way of return of animation */
+}
+
+.musicBars:nth-of-type(4) {
+  animation-delay: -4.7s; /* Start mid-way of return of animation */
+}
+
+.musicBars:nth-of-type(5) {
+  animation-delay: -5.7s; /* Start mid-way of return of animation */
+}
+
+.musicBars:nth-of-type(6) {
+  animation-delay: -6.7s; /* Start mid-way of return of animation */
+}
+
+.paused {
+  width: 3px;
+  height: 10%;
+  background-color: #fff;
+  border-radius: 3px;
+  transform-origin: bottom;
+  content: "";
+}
+
+@media only screen and (max-width: 800px) {
+  .auioContainer {
+    display: none;
+    min-width: 12rem;
+    max-width: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .audioTitle {
+    display: none;
+  }
+
+  .audioSubTitle {
+    display: none;
+  }
+
+  .trackInfo {
+    display: none;
+  }
+
+  .musicVisual {
+    position: relative;
+    display: none;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    align-items: flex-end;
+  }
+
+  .playButton {
+    height: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nextButtonActive {
+    height: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -19,11 +19,25 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .navbar {
     position: relative;
     border-top: 1px solid rgba(137, 136, 136, 0.517);
     max-width: 100%;
     border-right: 0;
+    margin: 0;
   }
+}
+
+.activeButton {
+  margin-bottom: 1rem;
+}
+
+.inactiveButton {
+  margin-bottom: 1rem;
+  background-color: rgba(137, 136, 136, 0.517);
+}
+
+.disconnect {
+  background-color: rgb(147, 17, 145);
 }
