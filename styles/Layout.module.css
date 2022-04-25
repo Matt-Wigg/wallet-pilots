@@ -13,7 +13,6 @@
     margin: 0;
   }
   .main {
-    height: none;
-    height: auto;
+    height: 100vh;
   }
 }

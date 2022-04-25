@@ -18,28 +18,38 @@ const Home = () => {
         <link rel="icon" href="/metamask-icon.svg" />
       </Head>
       <Typing />
-      <div className={style.detail}> 
+      <div className={style.detail}>
         <h1>See you all soon 💎✈🔮</h1>
-        <p>&rdquo;If we all worked on the assumption that what is accepted as true is really true, <br/>there would be little hope of advance.&rdquo; - <i>Orville Wright</i></p>
+        <p>
+          &rdquo;If we all worked on the assumption that what is accepted as
+          true is really true, <br />
+          there would be little hope of advance.&rdquo; - <i>Orville Wright</i>
+        </p>
         {account && (
-        <div>
-          <div className={style.ethereumContainer} />
-          <div className={style.ethereumContainer} />
-          <h2>I&apos;ll just show you this, for now... 👀</h2>
-          <p>
-            Current address:{" "}
-            <span className={style.ethereumDetail}>{account}</span>
-          </p>
-        </div>
-      )}
-      {chainId && (
-        <div>
-          <p>
-            Current chain id:{" "}
-            <span className={style.ethereumDetail}>{chainId}</span>
-          </p>
-        </div>
-      )}
+          <div>
+            <div className={style.container}>
+              <div className={style.stack} style={{ "--stacks": 2 }}>
+                <span style={{ "--index": 0 }}>Wallet Info:</span>
+                <span style={{ "--index": 1 }}>Wallet Info:</span>
+                <span style={{ "--index": 2 }}>Wallet Info:</span>
+              </div>
+            </div>
+            <div className={style.ethereumContainer}>
+              <p>
+                Current address:{" "}
+                <span className={style.ethereumDetail}>{account}</span>
+              </p>
+            </div>
+          </div>
+        )}
+        {chainId && (
+          <div>
+            <p>
+              Current chain id:{" "}
+              <span className={style.ethereumDetail}>{chainId}</span>
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
