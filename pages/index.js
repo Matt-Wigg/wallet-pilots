@@ -17,7 +17,7 @@ const Home = () => {
         <meta name="description" content="Wallet Pilots" />
         <link rel="icon" href="/metamask-icon.svg" />
       </Head>
-      <Typing />
+      <Typing />    
       <div className={style.detail}>
         <h1>See you all soon 💎✈🔮</h1>
         <p>
@@ -48,9 +48,9 @@ const Home = () => {
               Current chain id:{" "}
               <span className={style.ethereumDetail}>{chainId}</span>
             </p>
+            <i>Thats all... for now... 👀 ✈️ </i>
           </div>
         )}
-        <i>Thats all... for now 👀</i>
       </div>
     </div>
   );

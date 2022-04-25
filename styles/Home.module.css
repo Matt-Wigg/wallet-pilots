@@ -31,10 +31,10 @@
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+  padding-bottom:1rem;
 }
 
 .stack {
-  padding-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
 }
