@@ -19,6 +19,7 @@
   0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -46,6 +47,7 @@
 @media only screen and (max-width: 800px) {
   .modal {
     width: 90vw;
+    top: 70%;
   }
 }
 

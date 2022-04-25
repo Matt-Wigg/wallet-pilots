@@ -23,7 +23,7 @@ const Home = () => {
         <p>
           &rdquo;If we all worked on the assumption that what is accepted as
           true is really true, <br />
-          there would be little hope of advance.&rdquo; - <i>Orville Wright</i>
+          there would be little hope of advance.&rdquo; <i> - Orville Wright</i>
         </p>
         {account && (
           <div>
@@ -50,6 +50,7 @@ const Home = () => {
             </p>
           </div>
         )}
+        <i>Thats all... for now 👀</i>
       </div>
     </div>
   );
