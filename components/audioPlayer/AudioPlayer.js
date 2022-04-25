@@ -47,7 +47,7 @@ const AudioPlayer = (props) => {
         <div className={style.buttonContainer}>
           <div className={style.buttonContainer}>
             <button className={style.playerButton} onClick={restartAndPrevious}>
-              <svg
+              <svg innerHTML
                 stroke="currentColor"
                 fill="currentColor"
                 strokeWidth="0"
@@ -66,7 +66,7 @@ const AudioPlayer = (props) => {
             ></audio>
             <button className={style.playerButton} onClick={togglePlayPause}>
               {isPlaying ? (
-                <svg
+                <svg innerHTML
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
@@ -78,7 +78,7 @@ const AudioPlayer = (props) => {
                   <path d="M8 7h3v10H8zm5 0h3v10h-3z"></path>
                 </svg>
               ) : (
-                <svg
+                <svg innerHTML
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
