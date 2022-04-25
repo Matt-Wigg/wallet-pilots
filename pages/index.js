@@ -11,7 +11,6 @@ const Home = () => {
   const { account, chainId } = useWeb3React();
   return (
     <div className={style.main}>
-      <AudioPlayer />
       <Head>
         <title>Wallet Pilots</title>
         <meta name="description" content="Wallet Pilots" />
@@ -22,8 +21,7 @@ const Home = () => {
         <h1>See you all soon 💎✈🔮</h1>
         <p>
           &rdquo;If we all worked on the assumption that what is accepted as
-          true is really true, <br />
-          there would be little hope of advance.&rdquo; <i> - Orville Wright</i>
+          true is really true, there would be little hope of advance.&rdquo; <i> - Orville Wright</i>
         </p>
         {account && (
           <div>
@@ -52,6 +50,7 @@ const Home = () => {
           </div>
         )}
       </div>
+      <AudioPlayer />
     </div>
   );
 };

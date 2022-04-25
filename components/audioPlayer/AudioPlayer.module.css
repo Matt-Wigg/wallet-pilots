@@ -134,11 +134,16 @@
 
 @media only screen and (max-width: 800px) {
   .auioContainer {
-    display: none;
     min-width: 12rem;
     max-width: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: -webkit-sticky;
+    bottom: 2rem;
+    z-index: 100 !important;
+    background-color: #1a1a1d;
   }
   .audioTitle {
     display: none;
