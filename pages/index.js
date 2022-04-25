@@ -19,8 +19,8 @@ const Home = () => {
       </Head>
       <Typing />
       <div className={style.detail}> 
-        <h1>We&apos;ll see you all soon 💎✈🔮</h1>
-        <div>&rdquo;If we all worked on the assumption that what is accepted as true is really true, there would be little hope of advance.&rdquo; - Orville Wright</div>
+        <h1>See you all soon 💎✈🔮</h1>
+        <p><i>&rdquo;If we all worked on the assumption that what is accepted as true is really true, there would be little hope of advance.&rdquo; - Orville Wright</i></p>
         {account && (
         <div>
           <div className={style.ethereumContainer} />

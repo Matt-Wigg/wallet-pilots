@@ -24,6 +24,7 @@ a {
   border: 0px;
   font: inherit;
   vertical-align: baseline;
+  overflow-wrap: break-word;
 }
 
 ul {
@@ -57,6 +58,14 @@ h2 {
 
 p {
   padding-bottom: 0.5rem;
+  font-size: 18px;
+  text-overflow: wrap;
+  line-height: 2rem;
+  color:rgba(255, 255, 255, 0.613)
+}
+
+span {
+  overflow-wrap: break-word;
 }
 
 button {
