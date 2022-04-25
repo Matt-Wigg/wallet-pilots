@@ -9,30 +9,36 @@ export default function Navbar({ showModal }) {
   const [disabled, setDisabled] = useState(false);
 
   const handleConnect = (e) => {
-    showModal(true);
+    setTimeout(() => showModal(true), 500);
+    e.preventDefault();
   };
 
   const handleDisconnect = (e) => {
     setDisabled(false);
-    showModal(false);
-    setTimeout(deactivate, 500);
+    setTimeout(() => {
+      showModal();
+      deactivate();
+    }, 500);
     e.preventDefault();
   };
 
   return (
     <nav className={style.navbar}>
       {!active && (
-        <button onClick={(e) => handleConnect(e)}>CONNECT</button>
+        <button onClick={(e) => handleConnect(e)}>CONNECT WALLET</button>
       )}
       {active && (
-        <button className={style.disconnect} disabled={disabled} onClick={handleDisconnect}>
-          DISCONNECT
+        <button
+          className={style.disconnect}
+          disabled={disabled}
+          onClick={handleDisconnect}
+        >
+          DISCONNECT WALLET
         </button>
       )}
       <ul>
-        <button className={style.activeButton}>✈️ Home ✈️</button>
-        <button className={style.inactiveButton}>Pilot Training (soon)</button>
-        <button className={style.inactiveButton}>The Hanger (soon)</button>
+        <button disabled className={style.inactiveButton}>The Hanger (...soon)</button>
+        <button disabled className={style.inactiveButton}>Recruitment (...soon)</button>
       </ul>
     </nav>
   );

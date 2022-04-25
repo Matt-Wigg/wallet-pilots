@@ -19,3 +19,7 @@
 .ethereumContainer {
   padding-top: 1rem;
 }
+
+.detail {
+  height: calc(50vh);
+}

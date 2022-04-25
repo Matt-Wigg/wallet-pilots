@@ -1,6 +1,5 @@
 import style from "../styles/Modal.module.css";
 import { useWeb3React } from "@web3-react/core";
-import Image from "next/image";
 
 import { connectors } from "../utilities/connectors";
 
@@ -8,14 +7,15 @@ export default function Modal({ showModal }) {
   const { activate } = useWeb3React();
 
   const connectWallet = (e, connectionType) => {
-    console.log(process.env.NEXT_PUBLIC_INFURA_KEY);
-    activate(connectionType);
-    showModal(false);
+    setTimeout(()=> {
+      activate(connectionType);
+      showModal(false);
+    }, 500);
     e.preventDefault();
   };
 
   const closeModal = (e) => {
-    showModal(false);
+    setTimeout(()=> showModal(false), 500);
     e.preventDefault();
   };
 
@@ -24,18 +24,18 @@ export default function Modal({ showModal }) {
       <div className={style.container}>
         <h1>Select Your Wallet</h1>
         <button
-          className={style.coinBase}
-          type="submit"
-          onClick={(e) => connectWallet(e, connectors.coinbaseWallet)}
-        >
-          Coinbase
-        </button>
-        <button
           className={style.metaMask}
           type="submit"
           onClick={(e) => connectWallet(e, connectors.injected)}
         >
           MetaMask
+        </button>
+        <button
+          className={style.coinBase}
+          type="submit"
+          onClick={(e) => connectWallet(e, connectors.coinbaseWallet)}
+        >
+          Coinbase
         </button>
         <button
           className={style.walletConnect}

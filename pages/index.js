@@ -13,24 +13,19 @@ const Home = () => {
     <div className={style.main}>
       <AudioPlayer />
       <Head>
-        <title>Wallet Pilot</title>
-        <meta name="description" content="Wallet Pilot" />
+        <title>Wallet Pilots</title>
+        <meta name="description" content="Wallet Pilots" />
         <link rel="icon" href="/metamask-icon.svg" />
       </Head>
       <Typing />
-      <div></div>
-      <div>
-        <h1>We&apos;ll see you all soon.</h1>
-        <p>
-          Wallet Pilot is a celebration towards the ideas of the future, and the
-          people who want to be a part of them.
-        </p>
-      </div>
-      {account && (
+      <div className={style.detail}> 
+        <h1>We&apos;ll see you all soon 💎✈🔮</h1>
+        <div>&rdquo;If we all worked on the assumption that what is accepted as true is really true, there would be little hope of advance.&rdquo; - Orville Wright</div>
+        {account && (
         <div>
           <div className={style.ethereumContainer} />
           <div className={style.ethereumContainer} />
-          <h2>More coming soon:</h2>
+          <h2>We just show you this... for now 👀</h2>
           <p>
             Current address:{" "}
             <span className={style.ethereumDetail}>{account}</span>
@@ -45,6 +40,7 @@ const Home = () => {
           </p>
         </div>
       )}
+      </div>
     </div>
   );
 };
