@@ -12,41 +12,46 @@ const Home = () => {
   return (
     <div className={style.main}>
       <Head>
-        <title>Wallet Pilots</title>
+        <title>Welcome to Pilots</title>
         <meta name="description" content="Wallet Pilots" />
         <link rel="icon" href="/metamask-icon.svg" />
       </Head>
-      <Typing />    
-      <div className={style.detail}>
-        <h1>See you all soon 💎✈🔮</h1>
+      <div>
+        <h1>Welcome to Wallet Pilot</h1>
         <p>
-          &rdquo;If we all worked on the assumption that what is accepted as
-          true is really true, there would be little hope of advance.&rdquo; <i> - Orville Wright</i>
+          Wallet Pilot is a community-driven approach to asset and utility
+          management.
         </p>
+        <p>
+          Owning one of our 10,000 unique <a>Pilot NTFs</a>, living on the
+          ethereum blockchain, grants you access to <a>The Hanger</a>: A
+          community-governed portfolio management tool. Pilots also unlock
+          addiontal community channels, future mints, digital utilities, and
+          much more!
+        </p>
+        <p>
+          Learn more about who we are, what we are doing, and how to get
+          involved in our <a>about us</a> section.
+        </p>
+      </div>
+      <div>
         {account && (
-          <div>
-            <div className={style.container}>
-              <div className={style.stack} style={{ "--stacks": 2 }}>
-                <span style={{ "--index": 0 }}>Wallet Info:</span>
-                <span style={{ "--index": 1 }}>Wallet Info:</span>
-                <span style={{ "--index": 2 }}>Wallet Info:</span>
-              </div>
-            </div>
-            <div className={style.ethereumContainer}>
-              <p>
-                Current address:{" "}
-                <span className={style.ethereumDetail}>{account}</span>
-              </p>
-            </div>
+          <div className={style.ethereumContainer}>
+            <p>
+              Current address:{" "}
+              <span className={style.ethereumDetail}>{account}</span>
+            </p>
           </div>
         )}
         {chainId && (
-          <div>
+          <div className={style.ethereumContainer}>
             <p>
               Current chain id:{" "}
               <span className={style.ethereumDetail}>{chainId}</span>
             </p>
-            <i>Thats all... for now... 👀 ✈️ </i>
+            <div className={style.ethereumContainer}>
+              <p>Thats all... for now... 👀 ✈️</p>
+            </div>
           </div>
         )}
       </div>

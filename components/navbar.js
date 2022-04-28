@@ -9,16 +9,14 @@ export default function Navbar({ showModal }) {
   const [disabled, setDisabled] = useState(false);
 
   const handleConnect = (e) => {
-    setTimeout(() => showModal(true), 500);
+    showModal(true);
     e.preventDefault();
   };
 
   const handleDisconnect = (e) => {
     setDisabled(false);
-    setTimeout(() => {
-      showModal();
-      deactivate();
-    }, 500);
+    showModal();
+    deactivate();
     e.preventDefault();
   };
 
@@ -37,8 +35,12 @@ export default function Navbar({ showModal }) {
         </button>
       )}
       <ul>
-        <button disabled className={style.inactiveButton}>The Hanger (...soon)</button>
-        <button disabled className={style.inactiveButton}>Recruitment (...soon)</button>
+        <button disabled className={style.inactiveButton}>
+          Recruitment (...soon)
+        </button>
+        <button disabled className={style.inactiveButton}>
+          The Hanger (...soon)
+        </button>
       </ul>
     </nav>
   );

@@ -7,28 +7,26 @@ export default function Modal({ showModal }) {
   const { activate } = useWeb3React();
 
   const connectWallet = (e, connectionType) => {
-    setTimeout(()=> {
-      activate(connectionType);
-      showModal(false);
-    }, 500);
+    activate(connectionType);
+    showModal(false);
     e.preventDefault();
   };
 
   const closeModal = (e) => {
-    setTimeout(()=> showModal(false), 500);
+    showModal(false);
     e.preventDefault();
   };
 
   return (
     <div className={style.modal}>
+      <h2>Select Your Wallet</h2>
       <div className={style.container}>
-        <h1>Select Your Wallet</h1>
         <button
           className={style.metaMask}
           type="submit"
           onClick={(e) => connectWallet(e, connectors.injected)}
         >
-          MetaMask
+          Injected (MetaMask etc.)
         </button>
         <button
           className={style.coinBase}
