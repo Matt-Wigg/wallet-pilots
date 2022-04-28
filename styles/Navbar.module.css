@@ -34,6 +34,11 @@
 .inactiveButton {
   margin-bottom: 1rem;
   cursor: crosshair;
+  min-height: 80px;
+}
+
+.inactiveButton:hover {
+  background-color: rgba(137, 136, 136, 0.517);
 }
 
 .disconnect {
