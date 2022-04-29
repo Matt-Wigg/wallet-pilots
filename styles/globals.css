@@ -16,6 +16,7 @@ a {
   color: rgb(217, 50, 214);
   text-decoration: underline;
   text-underline-offset: 0.1em;
+  cursor: crosshair;
 }
 
 * {

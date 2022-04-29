@@ -31,7 +31,7 @@ const Home = () => {
         </p>
         <p>
           Learn more about who we are, what we are doing, and how to get
-          involved in our <a>about us</a> section.
+          involved in our <a>About Us</a> section.
         </p>
       </div>
       <div>
