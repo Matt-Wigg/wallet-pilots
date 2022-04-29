@@ -19,6 +19,10 @@ a {
   cursor: crosshair;
 }
 
+a:hover {
+  color: rgba(137, 136, 136, 0.517);
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;

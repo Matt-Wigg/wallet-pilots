@@ -23,15 +23,15 @@ const Home = () => {
           management.
         </p>
         <p>
-          Owning one of our 10,000 unique <a>Pilot NTFs</a>, living on the
-          ethereum blockchain, grants you access to <a>The Hanger</a>: A
+          Owning one of our 10,000 unique <a>Pilot NTFs(...soon)</a>, living on the
+          ethereum blockchain, grants you access to <a>The Hanger(...soon)</a>: A
           community-governed portfolio management tool. Pilots also unlock
           addiontal community channels, future mints, digital utilities, and
           much more!
         </p>
         <p>
           Learn more about who we are, what we are doing, and how to get
-          involved in our <a>About Us</a> section.
+          involved in <a>Recruitment(...soon)</a>.
         </p>
       </div>
       <div>

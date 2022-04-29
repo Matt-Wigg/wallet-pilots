@@ -36,13 +36,16 @@ export default function Navbar({ showModal }) {
       )}
       <ul>
         <button disabled className={style.inactiveButton}>
-          Recruitment <br />(...soon)
+          Pilots <br />
+          (...soon)
         </button>
         <button disabled className={style.inactiveButton}>
-          Pilots <br />(...soon)
+          The Hanger <br />
+          (...soon)
         </button>
         <button disabled className={style.inactiveButton}>
-          The Hanger <br />(...soon)
+          Recruitment <br />
+          (...soon)
         </button>
       </ul>
     </nav>

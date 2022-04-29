@@ -45,6 +45,7 @@
 
 .inactiveButton:hover {
   background-color: rgba(137, 136, 136, 0.517);
+  color: #000;
 }
 
 .disconnect {
