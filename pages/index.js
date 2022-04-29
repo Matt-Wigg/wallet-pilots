@@ -50,7 +50,7 @@ const Home = () => {
               <span className={style.ethereumDetail}>{chainId}</span>
             </p>
             <div className={style.ethereumContainer}>
-              <p>Thats all... for now... 👀 ✈️</p>
+              <p>That is all... for now... 👀 ✈️</p>
             </div>
           </div>
         )}
