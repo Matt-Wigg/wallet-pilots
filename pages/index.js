@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className={style.main}>
       <Head>
-        <title>Welcome to Pilots</title>
+        <title>Welcome, Pilots!</title>
         <meta name="description" content="Wallet Pilots" />
         <link rel="icon" href="/pilot.svg" />
       </Head>
