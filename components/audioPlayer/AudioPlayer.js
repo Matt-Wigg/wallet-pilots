@@ -47,13 +47,13 @@ const AudioPlayer = (props) => {
         <div className={style.buttonContainer}>
           <div className={style.buttonContainer}>
             <button className={style.playerButton} onClick={restartAndPrevious}>
-              <svg innerHTML
+              <svg 
                 stroke="currentColor"
                 fill="currentColor"
                 strokeWidth="0"
                 viewBox="0 0 24 24"
-                height="sm"
-                width="sm"
+                height="100%"
+                width="100%"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="m16 7-7 5 7 5zm-7 5V7H7v10h2z"></path>
@@ -66,25 +66,25 @@ const AudioPlayer = (props) => {
             ></audio>
             <button className={style.playerButton} onClick={togglePlayPause}>
               {isPlaying ? (
-                <svg innerHTML
+                <svg 
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
                   viewBox="0 0 24 24"
-                  height="sm"
-                  width="sm"
+                  height="100%"
+                  width="100%"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M8 7h3v10H8zm5 0h3v10h-3z"></path>
                 </svg>
               ) : (
-                <svg innerHTML
+                <svg 
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
                   viewBox="0 0 24 24"
-                  height="sm"
-                  width="sm"
+                  height="100%"
+                  width="100%"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M7 6v12l10-6z"></path>

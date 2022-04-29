@@ -50,4 +50,9 @@
 
 .disconnect {
   background-color: rgb(217, 50, 214);
+  margin-bottom: 1rem;
+}
+
+.connect {
+  margin-bottom: 1rem;
 }

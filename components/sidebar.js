@@ -1,12 +1,12 @@
 import { useState } from "react";
+import propTypes from "prop-types";
 import { useWeb3React } from "@web3-react/core";
-// import { connectors } from "../utilities/connectors";
 
-import style from "../styles/Navbar.module.css";
+import style from "../styles/Sidebar.module.css";
 
-export default function Navbar({ showModal }) {
-  const { activate, deactivate, active } = useWeb3React();
+const Sidebar = ({ showModal }) => {
   const [disabled, setDisabled] = useState(false);
+  const { deactivate, active } = useWeb3React();
 
   const handleConnect = (e) => {
     showModal(true);
@@ -22,19 +22,21 @@ export default function Navbar({ showModal }) {
 
   return (
     <nav className={style.navbar}>
-      {!active && (
-        <button onClick={(e) => handleConnect(e)}>CONNECT WALLET</button>
-      )}
-      {active && (
-        <button
-          className={style.disconnect}
-          disabled={disabled}
-          onClick={handleDisconnect}
-        >
-          DISCONNECT WALLET
-        </button>
-      )}
       <ul>
+        {!active && (
+          <button onClick={(e) => handleConnect(e)} className={style.connect}>
+            CONNECT WALLET
+          </button>
+        )}
+        {active && (
+          <button
+            className={style.disconnect}
+            disabled={disabled}
+            onClick={handleDisconnect}
+          >
+            DISCONNECT WALLET
+          </button>
+        )}
         <button disabled className={style.inactiveButton}>
           Pilots <br />
           (...soon)
@@ -51,3 +53,9 @@ export default function Navbar({ showModal }) {
     </nav>
   );
 }
+
+Sidebar.propTypes = {
+  showModal: propTypes.func,
+};
+
+export default Sidebar;
