@@ -40,7 +40,7 @@
 .inactiveButton {
   margin-bottom: 1rem;
   cursor: crosshair;
-  max-height: 80px;
+  min-height: 80px;
 }
 
 .inactiveButton:hover {
