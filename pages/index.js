@@ -14,7 +14,7 @@ const Home = () => {
       <Head>
         <title>Welcome to Pilots</title>
         <meta name="description" content="Wallet Pilots" />
-        <link rel="icon" href="/metamask-icon.svg" />
+        <link rel="icon" href="/pilot.svg" />
       </Head>
       <div>
         <h1>Welcome to Wallet Pilot</h1>
