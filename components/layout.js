@@ -9,10 +9,19 @@ import styles from "../styles/Layout.module.css";
 
 export default function Layout({ children }) {
   const [showModal, setShowModal] = useState(false);
+
+  const handleClick = (e) => {
+    if (showModal) setShowModal(false);
+    e.preventDefault();
+  }
+
   return (
     <div>
       {showModal && <Modal showModal={setShowModal} />}
-      <div className={showModal ? styles.modalBlur : styles.layout}>
+      <div
+        className={showModal ? styles.modalBlur : styles.layout}
+        onClick={(e) => handleClick(e)}
+      >
         <main className={styles.main}>{children}</main>
         <Sidebar showModal={setShowModal} />
         <AudioPlayer />
