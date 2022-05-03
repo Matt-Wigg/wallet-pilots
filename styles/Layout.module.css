@@ -1,12 +1,20 @@
 .layout {
-  margin-left: 250px;
   display: flex;
   flex-direction: column;
 }
 
 .main {
   height: calc(100vh - 4rem);
+  margin-left: 250px;
   padding: 4rem;
+  width: 100%;
+}
+
+.modalBlur {
+  display: flex;
+  flex-direction: column;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 @media only screen and (max-width: 800px) {
@@ -15,5 +23,6 @@
   }
   .main {
     height: auto;
+    margin-left: 0;
   }
 }

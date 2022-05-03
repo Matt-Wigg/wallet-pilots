@@ -10,12 +10,14 @@ import styles from "../styles/Layout.module.css";
 export default function Layout({ children }) {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div className={styles.layout}>
+    <div>
       {showModal && <Modal showModal={setShowModal} />}
-      <main className={styles.main}>{children}</main>
-      <Sidebar showModal={setShowModal} />
-      <AudioPlayer />
-      <Footer />
+      <div className={showModal ? styles.modalBlur : styles.layout}>
+        <main className={styles.main}>{children}</main>
+        <Sidebar showModal={setShowModal} />
+        <AudioPlayer />
+        <Footer />
+      </div>
     </div>
   );
 }

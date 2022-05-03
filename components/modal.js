@@ -18,35 +18,47 @@ export default function Modal({ showModal }) {
   };
 
   return (
-    <div className={style.modal}>
-      <h2>Select Your Wallet</h2>
-      <div className={style.container}>
-        <button
-          className={style.metaMask}
-          type="submit"
-          onClick={(e) => connectWallet(e, connectors.injected)}
-        >
-          Injected (MetaMask etc.)
-        </button>
-        <button
-          className={style.coinBase}
-          type="submit"
-          onClick={(e) => connectWallet(e, connectors.coinbaseWallet)}
-        >
-          Coinbase
-        </button>
-        <button
-          className={style.walletConnect}
-          type="submit"
-          onClick={(e) => connectWallet(e, connectors.walletConnect)}
-        >
-          Wallet Connect
-        </button>
-      </div>
-      <div className={style.close}>
-        <button className={style.closeModal} type="submit" onClick={closeModal}>
-          Close
-        </button>
+    <div className={style.backgroundBlur}>
+      <div className={style.modal}>
+        <h2>Select Your Wallet</h2>
+        <div className={style.walletButtonContainer}>
+          <div className={style.button}>
+            <button
+              className={style.metaMask}
+              type="submit"
+              onClick={(e) => connectWallet(e, connectors.injected)}
+            >
+              Injected (MetaMask etc.)
+            </button>
+          </div>
+          <div className={style.button}>
+            <button
+              className={style.coinBase}
+              type="submit"
+              onClick={(e) => connectWallet(e, connectors.coinbaseWallet)}
+            >
+              Coinbase
+            </button>
+          </div>
+          <div className={style.button}>
+            <button
+              className={style.walletConnect}
+              type="submit"
+              onClick={(e) => connectWallet(e, connectors.walletConnect)}
+            >
+              Wallet Connect
+            </button>
+          </div>
+          <div className={style.close}>
+            <button
+              className={style.closeModal}
+              type="submit"
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

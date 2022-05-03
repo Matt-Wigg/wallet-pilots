@@ -59,6 +59,14 @@
   margin: 5px;
 }
 
+.playerButtonActive {
+  background-color: rgb(217, 50, 214);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
 
 
 @keyframes bounce {

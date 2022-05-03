@@ -64,7 +64,7 @@ const AudioPlayer = (props) => {
               src="https://hikefightmusic.s3.us-west-1.amazonaws.com/krunk.mp3"
               preload="metadata"
             ></audio>
-            <button className={style.playerButton} onClick={togglePlayPause}>
+            <button className={isPlaying ? style.playerButtonActive : style.playerButton} onClick={togglePlayPause}>
               {isPlaying ? (
                 <svg 
                   stroke="currentColor"
