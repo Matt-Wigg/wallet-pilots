@@ -20,7 +20,8 @@ a {
 }
 
 a:hover {
-  color: rgba(137, 136, 136, 0.517);
+  color: rgb(116, 17, 112);
+  cursor: pointer;
 }
 
 * {
@@ -60,7 +61,6 @@ h2 {
   padding-bottom: 2rem;
   font-size: 28px;
   font-weight: 600;
-  text-align: center;
 }
 
 p {

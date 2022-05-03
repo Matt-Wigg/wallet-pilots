@@ -40,7 +40,7 @@
 .inactiveButton {
   margin-bottom: 1rem;
   cursor: crosshair;
-  min-height: 80px;
+  min-height: 40px;
 }
 
 .inactiveButton:hover {
@@ -48,11 +48,35 @@
   color: #000;
 }
 
-.disconnect {
-  background-color: rgb(217, 50, 214);
+.active {
   margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+.activeFocus {
+  background-color: rgb(81, 8, 79);
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+.activeFocus:hover {
+  background-color: rgb(81, 8, 79);
+  color: #fff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.activeFocus:focus {
+  background-color: rgb(81, 8, 79);
+  cursor: crosshair;
+}
+
+.disconnect {
+  background-color: rgb(81, 8, 79);
+  margin-bottom: 3rem;
 }
 
 .connect {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }

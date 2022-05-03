@@ -1,6 +1,7 @@
 import Sidebar from "./sidebar";
 import Footer from "./footer";
 import Modal from "./modal";
+import AudioPlayer from "./audioPlayer/AudioPlayer";
 
 import { useState } from "react";
 
@@ -13,6 +14,7 @@ export default function Layout({ children }) {
       {showModal && <Modal showModal={setShowModal} />}
       <main className={styles.main}>{children}</main>
       <Sidebar showModal={setShowModal} />
+      <AudioPlayer />
       <Footer />
     </div>
   );
