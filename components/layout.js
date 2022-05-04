@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = (e) => {
-    if (showModal) setShowModal(false);
+    setShowModal(!showModal);
     e.preventDefault();
   }
 
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       {showModal && <Modal showModal={setShowModal} />}
       <div
         className={showModal ? styles.modalBlur : styles.layout}
-        onClick={(e) => handleClick(e)}
+        onClick={(e) => showModal && handleClick(e)}
       >
         <main className={styles.main}>{children}</main>
         <Sidebar showModal={setShowModal} />
