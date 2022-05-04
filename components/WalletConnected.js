@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
-import styles from '../styles/Home.module.css';
+import styles from "../styles/Home.module.css";
 
-const WalletDetail = () => {
+const WalletConnected = () => {
   const { account, chainId } = useWeb3React();
   return (
     <div>
@@ -28,4 +28,4 @@ const WalletDetail = () => {
   );
 };
 
-export default WalletDetail;
+export default WalletConnected;

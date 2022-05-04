@@ -1,11 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useWeb3React } from "@web3-react/core";
-
 import style from "../styles/Home.module.css";
 
 const Home = () => {
-  const { account, chainId } = useWeb3React();
   return (
     <div className={style.main}>
       <Head>

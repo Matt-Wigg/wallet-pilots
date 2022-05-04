@@ -1,17 +1,15 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { useWeb3React } from "@web3-react/core";
 
 import Nav from "./nav/Nav";
 import Footer from "./footer/Footer";
 import Modal from "./modal/Modal";
 import Player from "./player/Player";
-import WalletDetail from "../WalletDetail";
+import WallerConnected from "../WalletConnected";
 
 import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {
-  const { account, chainId } = useWeb3React();
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = (e) => {
@@ -28,7 +26,7 @@ const Layout = ({ children }) => {
       >
         <main className={styles.main}>
           {children}
-          {account && chainId ? <WalletDetail /> : null}
+          <WallerConnected />
         </main>
         <Nav showModal={setShowModal} />
         <Player />
