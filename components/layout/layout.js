@@ -1,34 +1,34 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
-
-import Nav from "./nav/Nav";
-import Footer from "./footer/Footer";
-import Modal from "./modal/Modal";
-import Player from "./player/Player";
-import WallerConnected from "../WalletConnected";
-
+import PropTypes from "prop-types";
 import styles from "./Layout.module.css";
 
+// layout components
+import Nav from "./nav/Nav";
+import Modal from "./modal/Modal";
+import Player from "./player/Player";
+import Footer from "./footer/Footer";
+import WalletConnected from "./walletconnected/WalletConnected";
+
 const Layout = ({ children }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [modal, setmodal] = useState(false);
 
   const handleClick = (e) => {
-    setShowModal(!showModal);
+    setmodal(!modal);
     e.preventDefault();
   };
 
   return (
     <div>
-      {showModal && <Modal showModal={setShowModal} />}
+      {modal && <Modal modal={setmodal} />}
       <div
-        className={showModal ? styles.modalBlur : styles.layout}
-        onClick={(e) => showModal && handleClick(e)}
+        className={modal ? styles.modalBlur : styles.layout}
+        onClick={(e) => modal && handleClick(e)}
       >
         <main className={styles.main}>
           {children}
-          <WallerConnected />
+          <WalletConnected />
         </main>
-        <Nav showModal={setShowModal} />
+        <Nav modal={setmodal} />
         <Player />
         <Footer />
       </div>

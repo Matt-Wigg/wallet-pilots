@@ -1,5 +1,5 @@
 import { useWeb3React } from "@web3-react/core";
-import styles from "../styles/Home.module.css";
+import styles from "./WalletConnected.module.css";
 
 const WalletConnected = () => {
   const { account, chainId } = useWeb3React();

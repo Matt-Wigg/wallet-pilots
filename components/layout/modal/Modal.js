@@ -2,17 +2,17 @@ import { useWeb3React } from "@web3-react/core";
 import connectors from "../../../utilities/connectors";
 import style from "./Modal.module.css";
 
-export default function Modal({ showModal }) {
+export default function Modal({ modal }) {
   const { activate } = useWeb3React();
 
   const connectWallet = (e, connectionType) => {
     activate(connectionType);
-    showModal(false);
+    modal(false);
     e.preventDefault();
   };
 
   const closeModal = (e) => {
-    showModal(false);
+    modal(false);
     e.preventDefault();
   };
 

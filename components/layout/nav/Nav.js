@@ -6,19 +6,17 @@ import { useWeb3React } from "@web3-react/core";
 
 import style from "./Nav.module.css";
 
-const Nav = ({ showModal }) => {
-  const [disabled, setDisabled] = useState(false);
+const Nav = ({ modal }) => {
   const { deactivate, active } = useWeb3React();
   const router = useRouter();
 
   const handleConnect = (e) => {
-    showModal(true);
+    modal(true);
     e.preventDefault();
   };
 
   const handleDisconnect = (e) => {
-    setDisabled(false);
-    showModal();
+    modal(false);
     deactivate();
     e.preventDefault();
   };
@@ -33,11 +31,7 @@ const Nav = ({ showModal }) => {
         )}
         {active && (
           <Link href="/" passHref>
-            <button
-              className={style.disconnect}
-              disabled={disabled}
-              onClick={handleDisconnect}
-            >
+            <button className={style.disconnect} onClick={handleDisconnect}>
               DISCONNECT WALLET
             </button>
           </Link>
@@ -84,7 +78,7 @@ const Nav = ({ showModal }) => {
 };
 
 Nav.propTypes = {
-  showModal: propTypes.func,
+  modal: propTypes.func,
 };
 
 export default Nav;
