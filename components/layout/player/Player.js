@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import style from "./AudioPlayer.module.css";
+import style from "./Player.module.css";
 
 const AudioPlayer = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);

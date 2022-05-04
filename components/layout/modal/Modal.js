@@ -1,7 +1,6 @@
-import style from "../styles/Modal.module.css";
 import { useWeb3React } from "@web3-react/core";
-
-import { connectors } from "../utilities/connectors";
+import connectors from "../../../utilities/connectors";
+import style from "./Modal.module.css";
 
 export default function Modal({ showModal }) {
   const { activate } = useWeb3React();

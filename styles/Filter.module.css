@@ -1,9 +1,0 @@
-.container {
-  display: flex;
-  height: auto;
-  width: 100%;
-  background-color: rgba(137, 136, 136, 0.207);
-  color: white;
-  padding: 2rem;
-  justify-content: center;
-}

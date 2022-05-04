@@ -4,9 +4,9 @@ import { useState } from "react";
 import propTypes from "prop-types";
 import { useWeb3React } from "@web3-react/core";
 
-import style from "../styles/Sidebar.module.css";
+import style from "./Nav.module.css";
 
-const Sidebar = ({ showModal }) => {
+const Nav = ({ showModal }) => {
   const [disabled, setDisabled] = useState(false);
   const { deactivate, active } = useWeb3React();
   const router = useRouter();
@@ -83,8 +83,8 @@ const Sidebar = ({ showModal }) => {
   );
 };
 
-Sidebar.propTypes = {
+Nav.propTypes = {
   showModal: propTypes.func,
 };
 
-export default Sidebar;
+export default Nav;

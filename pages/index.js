@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useWeb3React } from "@web3-react/core";
 
 import style from "../styles/Home.module.css";
-import WalletDetail from "../components/WalletDetail";
 
 const Home = () => {
   const { account, chainId } = useWeb3React();
@@ -42,7 +41,6 @@ const Home = () => {
           .
         </p>
       </div>
-      {account && chainId ? <WalletDetail /> : null}
     </div>
   );
 };
