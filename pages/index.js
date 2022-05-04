@@ -6,14 +6,14 @@ const Home = () => {
   return (
     <div className={style.main}>
       <Head>
-        <title>Welcome To Wallet Pilot</title>
+        <title>Welcome To Wallet Pilots</title>
         <meta name="description" content="Wallet Pilots" />
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div>
-        <h1>Welcome To Wallet Pilot</h1>
+        <h1>Welcome To Wallet Pilots</h1>
         <p>
-          Wallet Pilot is a community-driven approach to asset and utility
+          Wallet Pilots is a community-driven approach to asset and utility
           management.
         </p>
         <p>
