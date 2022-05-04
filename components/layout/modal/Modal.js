@@ -27,7 +27,7 @@ export default function Modal({ modal }) {
               type="submit"
               onClick={(e) => connectWallet(e, connectors.injected)}
             >
-              Injected (MetaMask etc.)
+              Injected (E.g. MetaMask)
             </button>
           </div>
           <div className={style.button}>
