@@ -20,13 +20,13 @@ body {
 
 a {
   color: rgb(217, 50, 214);
-  text-underline-offset: 0.1em;
   cursor: pointer;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 h1 {
