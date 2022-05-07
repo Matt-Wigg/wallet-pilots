@@ -3,11 +3,11 @@
   display: block;
   bottom: 6rem;
   right: 2rem;
-  max-width: 400px;
-  min-width: 400px;
+  min-width: 425px;
+  padding:1rem;
   border-radius: 0.375rem;
   transition-duration: 0.1s;
-  height: 5rem;
+  height: 4.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   animation: fadeIn 1s;
   align-items: baseline;
@@ -27,7 +27,7 @@
 .audioDetail {
   display: flex;
   position: relative;
-  justify-content:space-evenly;
+  justify-content:space-between;
   align-items: center;
   transition-duration: 0.3s;
   height: 100%;
@@ -44,6 +44,8 @@
 .trackInfo {
   display: flex;
   flex-direction: column;
+  width: 145px;
+  line-height: 1.5rem;
 }
 
 .buttonContainer {
@@ -60,14 +62,6 @@
   margin: 5px;
 }
 
-.playerButtonActive {
-  background-color: rgb(217, 50, 214);
-  height: 40px;
-  width: 80px;
-  display: flex;
-  flex-direction: row;
-  margin: 5px;
-}
 
 
 
@@ -97,8 +91,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top:0.5rem;
-  width: 3rem;
+  min-width: 3rem;
   height: 1.75rem;
   align-items: flex-end;
 }
@@ -144,8 +137,8 @@
 
 @media only screen and (max-width: 800px) {
   .auioContainer {
-    min-width: 12rem;
-    max-width: 5rem;
+    width: fit-content;
+    display: flex;
     padding: 1rem;
     justify-content: center;
     margin: 0 auto;
@@ -153,6 +146,7 @@
     bottom: 3.5rem;
     right: 0;
     left: 0;
+    min-width: auto;
     z-index: 100 !important;
   }
   .audioTitle {

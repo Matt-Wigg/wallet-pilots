@@ -1,40 +1,58 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import style from "./Player.module.css";
 
-const AudioPlayer = (props) => {
+import tracks from "./tracks";
+
+const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioPlayer = useRef();
+  const [currentTrack, setCurrentTrack] = useState(0);
+
+  const { id, artist, title, source } = tracks[currentTrack];
+  const audioRef = useRef(typeof Audio !== "undefined" && new Audio(source));
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
     if (!prevValue) {
-      audioPlayer.current.loop = true;
-      audioPlayer.current.play();
+      audioRef.current.play();
     } else {
-      audioPlayer.current.pause();
+      audioRef.current.pause();
     }
   };
 
   const restartAndPrevious = () => {
-    const prevValue = isPlaying;
-    if (!prevValue) {
-      audioPlayer.current.load();
-      audioPlayer.current.play();
-      setIsPlaying(!prevValue);
+    if (currentTrack - 1 < 0) {
+      setCurrentTrack(tracks.length - 1);
     } else {
-      audioPlayer.current.pause();
-      audioPlayer.current.load();
-      audioPlayer.current.play();
+      setCurrentTrack(currentTrack - 1);
     }
   };
 
+  const nextSong = (e) => {
+    if (currentTrack === tracks.length - 1) setCurrentTrack(0);
+    else setCurrentTrack(currentTrack + 1);
+  };
+
+  useEffect(() => {
+    if (isPlaying) audioRef.current.play();
+    else audioRef.current.pause();
+  }, [isPlaying]);
+
+  useEffect(() => {
+    audioRef.current.pause();
+    audioRef.current = new Audio(source);
+    if (isPlaying) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  }, [currentTrack]);
+
   return (
     <div className={style.auioContainer}>
-      <div className={style.audioDetail}>
+      <div className={style.audioDetail} key={id}>
         <div className={style.trackInfo}>
-          <div className={style.audioTitle}>Kunk</div>
-          <div className={style.audioSubTitle}>Sad Night Dynamite</div>
+          <div className={style.audioTitle}>{title}</div>
+          <div className={style.audioSubTitle}>{artist}</div>
         </div>
         <div className={style.musicVisual}>
           <span className={isPlaying ? style.musicBars : style.paused} />
@@ -47,7 +65,7 @@ const AudioPlayer = (props) => {
         <div className={style.buttonContainer}>
           <div className={style.buttonContainer}>
             <button className={style.playerButton} onClick={restartAndPrevious}>
-              <svg 
+              <svg
                 stroke="currentColor"
                 fill="currentColor"
                 strokeWidth="0"
@@ -59,14 +77,12 @@ const AudioPlayer = (props) => {
                 <path d="m16 7-7 5 7 5zm-7 5V7H7v10h2z"></path>
               </svg>
             </button>
-            <audio
-              ref={audioPlayer}
-              src="https://hikefightmusic.s3.us-west-1.amazonaws.com/krunk.mp3"
-              preload="metadata"
-            ></audio>
-            <button className={isPlaying ? style.playerButtonActive : style.playerButton} onClick={togglePlayPause}>
+            <button
+              className={style.playerButton}
+              onClick={togglePlayPause}
+            >
               {isPlaying ? (
-                <svg 
+                <svg
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
@@ -78,7 +94,7 @@ const AudioPlayer = (props) => {
                   <path d="M8 7h3v10H8zm5 0h3v10h-3z"></path>
                 </svg>
               ) : (
-                <svg 
+                <svg
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
@@ -91,7 +107,7 @@ const AudioPlayer = (props) => {
                 </svg>
               )}
             </button>
-            {/* <button className={style.playerButton}>
+            <button className={style.playerButton} onClick={nextSong}>
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -103,7 +119,7 @@ const AudioPlayer = (props) => {
               >
                 <path d="M7 7v10l7-5zm9 10V7h-2v10z"></path>
               </svg>
-            </button> */}
+            </button>
           </div>
         </div>
       </div>

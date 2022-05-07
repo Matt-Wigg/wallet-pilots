@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import style from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
 const Home = () => {
   return (
-    <div className={style.main}>
+    <div className={styles.main}>
       <Head>
         <title>Welcome To Wallet Pilots</title>
-        <meta name="description" content="Wallet Pilots" />
+        <meta name="description" content="Wallet Pilots" key="title"/>
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div>
