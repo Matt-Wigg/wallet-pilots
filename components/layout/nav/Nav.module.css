@@ -54,22 +54,16 @@
 }
 
 .activeFocus {
-  background-color: rgb(81, 8, 79);
+  background-color: rgb(217, 50, 214);
   margin-bottom: 1rem;
   min-height: 40px;
 }
 
 .activeFocus:hover {
-  background-color: rgb(81, 8, 79);
   color: #fff;
   margin-bottom: 1rem;
   cursor: pointer;
   min-height: 40px;
-}
-
-.activeFocus:focus {
-  background-color: rgb(81, 8, 79);
-  cursor: crosshair;
 }
 
 .disconnect {

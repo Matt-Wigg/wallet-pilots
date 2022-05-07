@@ -3,15 +3,26 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
+  const ColoredLine = ({ color }) => (
+    <hr
+      style={{
+        color: color,
+        backgroundColor: color,
+        height: 4,
+        marginBottom: "1rem",
+      }}
+    />
+  );
   return (
     <div className={styles.main}>
       <Head>
         <title>Welcome To Wallet Pilots</title>
-        <meta name="description" content="Wallet Pilots" key="title"/>
+        <meta name="description" content="Wallet Pilots" key="title" />
         <link rel="icon" href="/pilot.svg" />
       </Head>
-      <div>
+      <div className={styles.container}>
         <h1>Welcome To Wallet Pilots</h1>
+        <ColoredLine color="#fff" />
         <p>
           Wallet Pilots is a community-driven approach to asset and utility
           management.

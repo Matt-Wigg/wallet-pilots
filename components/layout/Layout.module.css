@@ -6,7 +6,7 @@
 .main {
   height: calc(100vh - 4rem);
   margin-left: 250px;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .modalBlur {
