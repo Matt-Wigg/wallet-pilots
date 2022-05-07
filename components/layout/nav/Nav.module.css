@@ -9,13 +9,13 @@
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0 auto;
   color: #fff;
   overflow: hidden;
-  max-width: 250px;
-  min-width: 250px;
+  max-width: 225px;
+  min-width: 225px;
   align-items: center;
 }
 
@@ -67,10 +67,10 @@
 }
 
 .disconnect {
-  background-color: rgb(81, 8, 79);
-  margin-bottom: 3rem;
+  background-color: rgb(217, 50, 214);
+  margin-bottom: 2rem;
 }
 
 .connect {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }

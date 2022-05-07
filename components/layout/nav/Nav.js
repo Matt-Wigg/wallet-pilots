@@ -42,7 +42,7 @@ const Nav = ({ modal }) => {
               router.pathname === "/" ? style.activeFocus : style.active
             }
           >
-            Start {router.pathname === "/" && "👈"}
+            Home {router.pathname === "/" && "👈"}
           </button>
         </Link>
         <Link href="/pilots" passHref>

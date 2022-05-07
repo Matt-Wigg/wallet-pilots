@@ -10,8 +10,19 @@
   color: rgb(217, 50, 214);
 }
 
+.ethereumAddress {
+  border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+}
+
 .ethereumContainer {
   border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+  padding-top:1rem;
+}
+
+.comingSoon{
+  padding-top:1rem;
+  color: rgba(137, 136, 136, 0.517);
+  text-align: end;
 }
 
 @media only screen and (max-width: 800px) {

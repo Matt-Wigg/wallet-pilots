@@ -5,8 +5,9 @@
 
 .main {
   height: calc(100vh - 4rem);
-  margin-left: 250px;
+  margin-left: 225px !important;
   padding: 2rem;
+  overflow-y: scroll !important;
 }
 
 .modalBlur {
@@ -23,6 +24,6 @@
   }
   .main {
     height: auto;
-    margin-left: 0;
+    margin: 0 !important;
   }
 }

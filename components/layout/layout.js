@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
       >
         <main className={styles.main}>
           {children}
-          <WalletConnected />
+          <WalletConnected modal={setmodal}/>
         </main>
         <Nav modal={setmodal} />
         <Player />

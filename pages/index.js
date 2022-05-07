@@ -9,7 +9,7 @@ const Home = () => {
         color: color,
         backgroundColor: color,
         height: 4,
-        marginBottom: "1rem",
+        marginBottom: "2rem",
       }}
     />
   );
@@ -21,10 +21,10 @@ const Home = () => {
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div className={styles.container}>
-        <h1>Welcome To Wallet Pilots</h1>
+        <h1>Wallet Pilots</h1>
         <ColoredLine color="#fff" />
         <p>
-          Wallet Pilots is a community-driven approach to asset and utility
+          Welcome to Wallet Pilots: a community-driven approach to asset and utility
           management.
         </p>
         <p>

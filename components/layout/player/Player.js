@@ -77,7 +77,7 @@ const AudioPlayer = () => {
                 <path d="m16 7-7 5 7 5zm-7 5V7H7v10h2z"></path>
               </svg>
             </button>
-            <button className={style.playerButton} onClick={togglePlayPause}>
+            <button className={isPlaying ? style.isPlaying : style.playerButton } onClick={togglePlayPause}>
               <svg
                 stroke="currentColor"
                 fill="currentColor"

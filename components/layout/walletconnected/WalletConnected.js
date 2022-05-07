@@ -1,17 +1,22 @@
 import { useWeb3React } from "@web3-react/core";
 import styles from "./WalletConnected.module.css";
 
-const WalletConnected = () => {
+const WalletConnected = ({ modal }) => {
   const { account, chainId } = useWeb3React();
+
+  const handleClick = () => {
+    modal(true);
+  };
+
   return (
     <main className={styles.main}>
       {!account && (
-        <div>
-          <p>Connect for more info:</p>
-        </div>
+        <p>
+          For more info: <a onClick={(e) => handleClick(e)}>Connect Wallet</a>
+        </p>
       )}
       {account && (
-        <div className={styles.ethereumContainer}>
+        <div className={styles.ethereumAddress}>
           <p>
             Current address:{" "}
             <span className={styles.ethereumDetail}>{account}</span>
@@ -27,8 +32,8 @@ const WalletConnected = () => {
         </div>
       )}
       {chainId && account && (
-        <div className={styles.ethereumDetail}>
-          <p>That&apos;s all, for now... 👀 ✈️</p>
+        <div className={styles.comingSoon}>
+          That&apos;s all, for now... 👀 ✈️
         </div>
       )}
     </main>

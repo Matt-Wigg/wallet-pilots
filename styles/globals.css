@@ -22,6 +22,7 @@ a {
   color: rgb(217, 50, 214);
   text-underline-offset: 0.1em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 a:hover {
