@@ -12,7 +12,7 @@ const WalletConnected = ({ modal }) => {
     <main className={styles.main}>
       {!account && (
         <p>
-          For more info: <a onClick={(e) => handleClick(e)}>Connect Wallet</a>
+          <a onClick={(e) => handleClick(e)}>Connect wallet</a> for more info!
         </p>
       )}
       {account && (

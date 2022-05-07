@@ -10,6 +10,7 @@ const Home = () => {
         backgroundColor: color,
         height: 4,
         marginBottom: "2rem",
+        width: "50%",
       }}
     />
   );
