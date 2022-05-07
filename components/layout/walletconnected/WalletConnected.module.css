@@ -1,8 +1,21 @@
+.main {
+  max-width: 55vw;
+  border: 1px solid rgba(137, 136, 136, 0.517);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
 .ethereumDetail {
   color: rgb(217, 50, 214);
 }
 
 .ethereumContainer {
-  padding-top: 1rem;
-  border-top: 1px solid rgba(137, 136, 136, 0.517);
+  border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+}
+
+@media only screen and (max-width: 800px) {
+  .main {
+    max-width: 100%;
+  }
 }

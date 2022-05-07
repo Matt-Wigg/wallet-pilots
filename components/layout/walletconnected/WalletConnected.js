@@ -4,7 +4,12 @@ import styles from "./WalletConnected.module.css";
 const WalletConnected = () => {
   const { account, chainId } = useWeb3React();
   return (
-    <div>
+    <main className={styles.main}>
+      {!account && (
+        <div>
+          <p>Connect for more info:</p>
+        </div>
+      )}
       {account && (
         <div className={styles.ethereumContainer}>
           <p>
@@ -19,12 +24,14 @@ const WalletConnected = () => {
             Current chain id:{" "}
             <span className={styles.ethereumDetail}>{chainId}</span>
           </p>
-          <div className={styles.ethereumContainer}>
-            <p>That is all... for now... 👀 ✈️</p>
-          </div>
         </div>
       )}
-    </div>
+      {chainId && account && (
+        <div className={styles.ethereumDetail}>
+          <p>That&apos;s all, for now... 👀 ✈️</p>
+        </div>
+      )}
+    </main>
   );
 };
 
