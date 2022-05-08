@@ -33,7 +33,7 @@ const WalletConnected = ({ modal }) => {
       )}
       {chainId && account && (
         <div className={styles.comingSoon}>
-          <div>That&apos;s all, for now... 👀 ✈️</div>
+          That&apos;s all, for now... 👀 ✈️
         </div>
       )}
     </main>

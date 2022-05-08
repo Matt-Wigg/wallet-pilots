@@ -1,5 +1,5 @@
 .main {
-  max-width: 52vw;
+  max-width: 53vw;
   border: 1px solid rgba(137, 136, 136, 0.517);
   padding: 2rem;
   border-radius: 3px;
@@ -23,6 +23,7 @@
 .comingSoon {
   padding-top: 1rem;
   text-align: end;
+  color: rgba(137, 136, 136, 0.517);
 }
 
 @media only screen and (max-width: 800px) {

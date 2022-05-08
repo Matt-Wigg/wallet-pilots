@@ -12,18 +12,18 @@ const Home = () => {
       </Head>
       <div className={styles.container}>
         <h1>
-          Welcome to <a>Wallet Pilot</a>
+          Welcome to <a className={styles.title}>Wallet Pilot</a>
         </h1>
         <p>
-          Wallet Pilot is a community-driven approach to asset and
-          utility management.
+          Wallet Pilot is a community-driven approach to asset and utility
+          management.
         </p>
         <p>
           Owning one of our 10,000 unique{" "}
           <Link href="/pilots">
             <a>Pilot NTFs(...soon)</a>
           </Link>
-          , that live on the ethereum blockchain, grants you access to{" "}
+          , living on the ethereum blockchain, grants you access to{" "}
           <Link href="/hanger">
             <a>The Hanger(...soon)</a>
           </Link>
