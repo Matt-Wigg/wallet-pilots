@@ -44,10 +44,10 @@ const Nav = ({ modal }) => {
             Home
           </button>
         </Link>
-        <Link href="/hanger" passHref>
+        <Link href="/the-hanger" passHref>
           <button
             className={
-              router.pathname === "/hanger" ? style.activeFocus : style.active
+              router.pathname === "/the-hanger" ? style.activeFocus : style.active
             }
           >
             The Hanger
