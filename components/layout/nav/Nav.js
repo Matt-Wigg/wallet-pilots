@@ -32,7 +32,7 @@ const Nav = ({ modal }) => {
         {active && (
           <Link href="/" passHref>
             <button className={style.disconnect} onClick={handleDisconnect}>
-              DISCONNECT WALLET
+              DISCONNECT
             </button>
           </Link>
         )}
@@ -42,7 +42,7 @@ const Nav = ({ modal }) => {
               router.pathname === "/" ? style.activeFocus : style.active
             }
           >
-            Home {router.pathname === "/" && "👈"}
+            Home
           </button>
         </Link>
         <Link href="/pilots" passHref>
@@ -51,7 +51,7 @@ const Nav = ({ modal }) => {
               router.pathname === "/pilots" ? style.activeFocus : style.active
             }
           >
-            Pilots {router.pathname === "/pilots" && "👈"}
+            Pilots
           </button>
         </Link>
         <Link href="/hanger" passHref>
@@ -60,7 +60,7 @@ const Nav = ({ modal }) => {
               router.pathname === "/hanger" ? style.activeFocus : style.active
             }
           >
-            The Hanger {router.pathname === "/hanger" && "👈"}
+            The Hanger
           </button>
         </Link>
         <Link href="/map" passHref>
@@ -69,7 +69,7 @@ const Nav = ({ modal }) => {
               router.pathname === "/map" ? style.activeFocus : style.active
             }
           >
-            The Map {router.pathname === "/map" && "👈"}
+            The Map
           </button>
         </Link>
       </ul>

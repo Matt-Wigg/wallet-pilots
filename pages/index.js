@@ -3,17 +3,6 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
-  const ColoredLine = ({ color }) => (
-    <hr
-      style={{
-        color: color,
-        backgroundColor: color,
-        height: 4,
-        marginBottom: "2rem",
-        width: "50%",
-      }}
-    />
-  );
   return (
     <div className={styles.main}>
       <Head>
@@ -22,11 +11,12 @@ const Home = () => {
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div className={styles.container}>
-        <h1>Wallet Pilots</h1>
-        <ColoredLine color="#fff" />
+        <h1>
+          Welcome to <a>Wallet Pilots</a>
+        </h1>
         <p>
-          Welcome to Wallet Pilots: a community-driven approach to asset and utility
-          management.
+          Wallet Pilots is a community-driven, branded approach to asset and
+          utility management.
         </p>
         <p>
           Owning one of our 10,000 unique{" "}

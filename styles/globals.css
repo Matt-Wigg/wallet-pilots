@@ -2,8 +2,8 @@
 
 html,
 body {
-  background: #000000;
-  font-family: Common Pixel, sans-serif;
+  background: #0e1e31;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   letter-spacing: 0.0625em;
   line-height: 2.5rem;
@@ -19,20 +19,22 @@ body {
 }
 
 a {
-  color: rgb(217, 50, 214);
+  color: #3673f5;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration: none;
 }
 
 h1 {
   font-size: 48px;
   font-weight: 700;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  line-height: 4rem;
 }
 
 h2 {
@@ -47,23 +49,24 @@ p {
 }
 
 button {
-  border-radius: 4px;
-  max-height: 36px;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  font-family: inherit;
-  line-height: 36px;
-  cursor: pointer;
-  transition: 0.1s;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.12);
-  border: solid 1px rgb(217, 50, 214);
+  border: 1px solid rgba(137, 136, 136, 0.517);
+  border-radius: 3px;
+  background-color: #101f2f;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 button:focus {
-  background-color: rgb(217, 50, 214);
+  background-color: #3673f5;
 }
 
 button:hover {
-  background-color: rgb(217, 50, 214);
+  background-color: #3673f5;
 }

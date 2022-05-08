@@ -98,8 +98,8 @@ const AudioPlayer = () => {
                 fill="currentColor"
                 strokeWidth="0"
                 viewBox="0 0 24 24"
-                height="sm"
-                width="sm"
+                height="100%"
+                width="100%"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M7 7v10l7-5zm9 10V7h-2v10z"></path>

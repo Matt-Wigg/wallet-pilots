@@ -11,4 +11,6 @@
   align-items: center;
   color: rgba(137, 136, 136, 0.517);
   transition: top 350ms ease 0s;
+  box-shadow: -4px -4px 15px 2px rgba(0, 0, 0, 0.2),
+  0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }

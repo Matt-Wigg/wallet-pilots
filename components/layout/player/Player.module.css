@@ -4,14 +4,13 @@
   bottom: 6rem;
   right: 2rem;
   min-width: 425px;
-  padding:1rem;
   border-radius: 0.375rem;
   transition-duration: 0.1s;
   height: 4.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   animation: fadeIn 1s;
   align-items: baseline;
-  background-color: #000;
+  background-color: #101f2f;
   border: 1px solid rgba(137, 136, 136, 0.517);
 }
 
@@ -27,10 +26,19 @@
 .audioDetail {
   display: flex;
   position: relative;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   transition-duration: 0.3s;
   height: 100%;
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 125px;
+  line-height: 1.5rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
 }
 
 .audioTitle {
@@ -39,20 +47,14 @@
 
 .audioSubTitle {
   font-size: 10px;
-}
-
-.trackInfo {
-  display: flex;
-  flex-direction: column;
-  min-width: 140px;
-  line-height: 1.5rem;
-  margin: 5px;
+  align-items: baseline;
 }
 
 .buttonContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right: 5px;
 }
 
 .playerButton {
@@ -69,7 +71,7 @@
   display: flex;
   flex-direction: row;
   margin: 5px;
-  background-color: rgb(217, 50, 214);
+  background-color: #3673f5;
 }
 
 @keyframes bounce {

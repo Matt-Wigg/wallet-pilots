@@ -11,9 +11,9 @@ const WalletConnected = ({ modal }) => {
   return (
     <main className={styles.main}>
       {!account && (
-        <p>
-          <a onClick={(e) => handleClick(e)}>Connect wallet</a> for more info!
-        </p>
+        <span>
+          <a onClick={(e) => handleClick(e)}>Connect a wallet</a> for more info!
+        </span>
       )}
       {account && (
         <div className={styles.ethereumAddress}>
@@ -33,7 +33,7 @@ const WalletConnected = ({ modal }) => {
       )}
       {chainId && account && (
         <div className={styles.comingSoon}>
-          That&apos;s all, for now... 👀 ✈️
+          <div>That&apos;s all, for now... 👀 ✈️</div>
         </div>
       )}
     </main>

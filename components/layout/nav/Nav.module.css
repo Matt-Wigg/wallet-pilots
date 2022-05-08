@@ -17,6 +17,8 @@
   max-width: 225px;
   min-width: 225px;
   align-items: center;
+  z-index: 1;
+  background-color: #0e1e31;
 }
 
 @media only screen and (max-width: 800px) {
@@ -54,7 +56,7 @@
 }
 
 .activeFocus {
-  background-color: rgb(217, 50, 214);
+  background-color: #3673f5;
   margin-bottom: 1rem;
   min-height: 40px;
 }
@@ -67,7 +69,7 @@
 }
 
 .disconnect {
-  background-color: rgb(217, 50, 214);
+  background-color: #3673f5;
   margin-bottom: 2rem;
 }
 
