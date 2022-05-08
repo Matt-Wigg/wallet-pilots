@@ -34,7 +34,7 @@
 .trackInfo {
   display: flex;
   flex-direction: column;
-  min-width: 125px;
+  min-width: 140px;
   line-height: 1.5rem;
   padding-top: 0.5rem;
   padding-left: 1rem;
@@ -156,6 +156,7 @@
     left: 0;
     min-width: auto;
     z-index: 100 !important;
+    background-color: rgba(14, 30, 49, 0.23);
   }
   .audioTitle {
     display: none;
@@ -186,5 +187,11 @@
   .nextButtonActive {
     height: 2rem;
     transition: all 0.2s ease-in-out;
+  }
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:0;
   }
 }

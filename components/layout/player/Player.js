@@ -50,7 +50,7 @@ const AudioPlayer = () => {
 
   return (
     <div className={style.auioContainer}>
-      <div className={style.audioDetail} key={id}>
+      <div className={style.audioDetail}>
         <div className={style.trackInfo}>
           <div className={style.audioTitle}>{title}</div>
           <div className={style.audioSubTitle}>{artist}</div>

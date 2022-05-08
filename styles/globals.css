@@ -64,6 +64,8 @@ button {
 
 button:focus {
   background-color: #3673f5;
+  border: auto;
+  outline: auto;
 }
 
 button:hover {
