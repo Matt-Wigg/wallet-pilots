@@ -44,15 +44,6 @@ const Nav = ({ modal }) => {
             Home
           </button>
         </Link>
-        <Link href="/pilots" passHref>
-          <button
-            className={
-              router.pathname === "/pilots" ? style.activeFocus : style.active
-            }
-          >
-            Pilots
-          </button>
-        </Link>
         <Link href="/hanger" passHref>
           <button
             className={
@@ -60,6 +51,15 @@ const Nav = ({ modal }) => {
             }
           >
             The Hanger
+          </button>
+        </Link>
+        <Link href="/pilots" passHref>
+          <button
+            className={
+              router.pathname === "/pilots" ? style.activeFocus : style.active
+            }
+          >
+            Pilots
           </button>
         </Link>
         <Link href="/map" passHref>
