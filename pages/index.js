@@ -6,16 +6,16 @@ const Home = () => {
   return (
     <div className={styles.main}>
       <Head>
-        <title>Welcome To Wallet Pilots</title>
-        <meta name="description" content="Wallet Pilots" key="title" />
+        <title>Welcome To Wallet Pilot</title>
+        <meta name="description" content="Wallet Pilot" key="title" />
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div className={styles.container}>
         <h1>
-          Welcome to <a>Wallet Pilots</a>
+          Welcome to <a>Wallet Pilot</a>
         </h1>
         <p>
-          Wallet Pilots is a community-driven, branded approach to asset and
+          Wallet Pilot is a community-driven approach to asset and
           utility management.
         </p>
         <p>
@@ -23,7 +23,7 @@ const Home = () => {
           <Link href="/pilots">
             <a>Pilot NTFs(...soon)</a>
           </Link>
-          , living on the ethereum blockchain, grants you access to{" "}
+          , that live on the ethereum blockchain, grants you access to{" "}
           <Link href="/hanger">
             <a>The Hanger(...soon)</a>
           </Link>

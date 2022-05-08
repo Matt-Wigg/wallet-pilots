@@ -26,7 +26,7 @@ const Nav = ({ modal }) => {
       <ul>
         {!active && (
           <button onClick={(e) => handleConnect(e)} className={style.connect}>
-            CONNECT WALLET
+            CONNECT
           </button>
         )}
         {active && (
