@@ -9,13 +9,13 @@
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: 0 auto;
   color: #fff;
   overflow: hidden;
-  max-width: 225px;
-  min-width: 225px;
+  max-width: 250px;
+  min-width: 250px;
   align-items: center;
   z-index: 1;
   background-color: #0e1e31;

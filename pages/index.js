@@ -33,9 +33,9 @@ const Home = () => {
         </p>
         <p>
           Learn more about who we are, what we are doing, and how to get
-          involved on{" "}
+          involved on our{" "}
           <Link href="/map">
-            <a>The Map(...soon)</a>
+            <a>Map(...soon)</a>
           </Link>
           .
         </p>

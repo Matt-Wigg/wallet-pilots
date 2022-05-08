@@ -5,7 +5,7 @@
 
 .main {
   height: calc(100vh - 4rem);
-  margin-left: 225px !important;
+  margin-left: 250px !important;
   padding: 2rem;
   overflow-y: scroll !important;
 }

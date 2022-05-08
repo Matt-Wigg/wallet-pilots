@@ -23,7 +23,6 @@ const Nav = ({ modal }) => {
 
   return (
     <nav className={style.navbar}>
-      <ul>
         {!active && (
           <button onClick={(e) => handleConnect(e)} className={style.connect}>
             CONNECT
@@ -69,10 +68,9 @@ const Nav = ({ modal }) => {
               router.pathname === "/map" ? style.activeFocus : style.active
             }
           >
-            The Map
+            Map
           </button>
         </Link>
-      </ul>
     </nav>
   );
 };
