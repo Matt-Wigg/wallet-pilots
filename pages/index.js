@@ -24,7 +24,7 @@ const Home = () => {
             <a>Pilot NTFs(...soon)</a>
           </Link>
           , living on the ethereum blockchain, grants you access to{" "}
-          <Link href="/hanger">
+          <Link href="/the-hanger">
             <a>The Hanger(...soon)</a>
           </Link>
           : A community-governed portfolio management tool. Pilots also unlock
