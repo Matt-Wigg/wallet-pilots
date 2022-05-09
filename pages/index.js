@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
       </Head>
       <div className={styles.container}>
         <h1>
-          Welcome to <a className={styles.title}>Wallet Pilot</a>
+          Welcome to Wallet Pilot
         </h1>
         <p>
           Wallet Pilot is a community-driven approach to asset and utility

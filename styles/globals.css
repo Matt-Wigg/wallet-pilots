@@ -1,73 +1,76 @@
-@import url("https://fonts.cdnfonts.com/css/common-pixel");
+:root {
+  --main-bg-color: #020610;
+  --main-font-color: #ffffff;
+  --main-link-color: #3672f5;
+  --main-border-color: #89888884;
+  --main-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 
 html,
 body {
-  background: #020610;
+  background: var(--main-bg-color);
+  color: var(--main-font-color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  letter-spacing: 0.1rem;
+  line-height: 1.8rem;
   overflow-wrap: break-word;
-  line-height: 2rem;
 }
 
 * {
-  border: 0;
-  color: rgb(255, 255, 255);
   box-sizing: border-box;
-  letter-spacing: 0.1rem;
   margin: 0;
   padding: 0;
 }
 
+p {
+  padding-bottom: 2rem;
+}
+
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 2rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  line-height: 1.5em;
+}
+
 a {
-  color: #3673f5;
+  color: var(--main-link-color);
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 0.2em;
-
 }
 
 a:hover {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: 700;
-  padding-bottom: 1rem;
-  line-height: 4rem;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 500;
-  padding-bottom: 1rem;
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 1rem;
-}
-
 button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-  width: 100%;
-  border: 1px solid rgba(137, 136, 136, 0.517);
+  background: none;
+  border: 1px solid var(--main-border-color);
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: var(--main-box-shadow);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: inherit;
+  width: 100%;
 }
 
 button:focus {
-  background-color: #3673f5;
-  border: auto;
+  background-color: var(--main-link-color);
   outline: auto;
 }
 
 button:hover {
-  background-color: #3673f5;
+  background-color: var(--main-link-color);
 }
