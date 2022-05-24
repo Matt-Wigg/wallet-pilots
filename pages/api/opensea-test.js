@@ -9,11 +9,13 @@ export default async function handler(req, res) {
       "X-API-KEY": `${process.env.NEXT_PUBLIC_OPENSEA_KEY}`,
     },
   };
-  fetch(
+  const data = await fetch(
     `https://api.opensea.io/api/v1/assets?owner=${address}&order_direction=desc&limit=50&include_orders=false`,
     options
   )
     .then((response) => response.json())
-    .then((response) => res.send(response))
+    .then((response) => response)
     .catch((err) => console.log(err));
+
+  res.send(data);
 }

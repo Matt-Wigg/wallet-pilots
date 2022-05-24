@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useWeb3React } from "@web3-react/core";
 import styles from "./WalletForm.module.css";
 
 const WalletForm = () => {
-  const [openSeaData, setOpenSeaData] = useState([]);
+  const [openSeaData, setOpenSeaData] = useState();
+  const { account } = useWeb3React();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = { address: event.target.address.value };
@@ -19,6 +22,7 @@ const WalletForm = () => {
     const dataStream = await response.json();
     setOpenSeaData(dataStream.assets);
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -28,7 +32,8 @@ const WalletForm = () => {
           type="text"
           id="address"
           name="address"
-          placeholder="Enter wallet address..."
+          placeholder={"Enter wallet address..."}
+          value={account && account}
           required
         />
         <button type="submit">Submit</button>
