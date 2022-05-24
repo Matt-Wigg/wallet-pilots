@@ -34,7 +34,6 @@ const WalletForm = () => {
           id="address"
           name="address"
           placeholder={"Enter wallet address..."}
-          value={account && account}
           required
         />
         <button type="submit">Submit</button>
@@ -47,23 +46,26 @@ const WalletForm = () => {
                 href={asset.permalink}
                 key={asset.id}
                 className={styles.nftInfo}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className={styles.nftImage}>
                   <Image
                     src={asset.image_preview_url}
                     alt="Picture of the author"
-                    width={10}
-                    height={10}
+                    width="100%"
+                    height="100%"
                     layout="responsive"
+                    objectFit="contain"
                   />
                 </div>
-                <span className={styles.nftName}>{asset.name || "#" + asset.token_id}</span>
+                <span className={styles.nftName}>
+                  {asset.name || "#" + asset.token_id}
+                </span>
                 <span className={styles.nftPrice}>
                   {asset.last_sale?.total_price
                     ? asset.last_sale?.total_price
-                    : "Mint"}
+                    : "Minted"}
                 </span>
               </a>
             );
