@@ -6,7 +6,7 @@
   border-radius: 3px;
   background: transparent;
   margin-bottom: 1rem;
-  color: var(--main-font-color)
+  color: var(--main-font-color);
 }
 
 .input:focus {
@@ -15,4 +15,32 @@
 
 .openSeaData {
   margin-top: 1rem;
+}
+
+.nftInfo {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--main-border-color);
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.nftInfo:hover {
+  background-color: rgb(28, 28, 28);
+}
+
+.nftImage {
+display: block;
+}
+
+.nftName {
+  padding-left: 1rem;
+}
+
+.nftPrice {
+  text-align: end;
+  padding-right: 0.5rem;
 }
