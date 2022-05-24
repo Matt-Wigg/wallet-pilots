@@ -1,0 +1,18 @@
+.input {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--main-border-color);
+  border-radius: 3px;
+  background: transparent;
+  margin-bottom: 1rem;
+  color: var(--main-font-color)
+}
+
+.input:focus {
+  outline: auto;
+}
+
+.openSeaData {
+  margin-top: 1rem;
+}

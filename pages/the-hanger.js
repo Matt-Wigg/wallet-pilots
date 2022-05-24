@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
+import WalletForm from "../components/wallet-form/WalletForm";
+
 const Hanger = () => (
   <div className={styles.container}>
     <Head>
@@ -9,7 +11,7 @@ const Hanger = () => (
       <link rel="icon" href="/pilot.svg" />
     </Head>
     <h1>The Hanger:</h1>
-    <h2>coming soon...</h2>
+    <WalletForm />
   </div>
 );
 
