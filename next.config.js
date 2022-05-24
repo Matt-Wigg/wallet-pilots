@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  env: {
-    INFURA_KEY: process.env.NEXT_PUBLIC_INFURA_KEY
-  }
+  images: {
+    domains: ['lh3.googleusercontent.com', 'lh3.googleusercontent.com'],
+  },
 }
 
 module.exports = nextConfig

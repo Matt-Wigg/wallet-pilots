@@ -16,6 +16,5 @@ export default async function handler(req, res) {
     .then((response) => response.json())
     .then((response) => response)
     .catch((err) => console.log(err));
-
   res.send(data);
 }

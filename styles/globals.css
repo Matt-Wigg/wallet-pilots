@@ -28,7 +28,6 @@ p {
   padding-bottom: 2rem;
 }
 
-
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -46,12 +45,12 @@ h2 {
 a {
   color: var(--main-link-color);
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 button {
