@@ -40,7 +40,6 @@ const WalletForm = () => {
         <button type="submit">Submit</button>
       </form>
       <div className={styles.openSeaData}>
-        {console.log(openSeaData)}
         {openSeaData &&
           openSeaData.map((asset) => {
             return (
