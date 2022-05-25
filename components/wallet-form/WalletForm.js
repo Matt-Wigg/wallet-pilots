@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { useWeb3React } from "@web3-react/core";
 import styles from "./WalletForm.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 
-const WalletForm = () => {
+const WalletForm = ({ account }) => {
   const [openSeaData, setOpenSeaData] = useState();
-  const { account } = useWeb3React();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const data = { address: event.target.address.value.trim() };
+  const getData = async (info) => {
+    const data = { address: info };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/opensea-test";
     const options = {
@@ -22,6 +20,16 @@ const WalletForm = () => {
     const response = await fetch(endpoint, options);
     const dataStream = await response.json();
     setOpenSeaData(dataStream.assets);
+  };
+
+  useEffect(() => {
+    getData(account);
+  }, [account]);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const accountToSearch = event.target.address.value.trim();
+    getData(accountToSearch);
   };
 
   return (
