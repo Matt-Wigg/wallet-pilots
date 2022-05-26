@@ -37,7 +37,7 @@ const WalletForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="first">Search NFTs:</label>
+        <label className={styles.searchNFT} htmlFor="first">Search NFTs:</label>
         <input
           className={styles.input}
           type="text"

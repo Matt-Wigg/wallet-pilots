@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #020610;
+  --main-background-color: #020610;
   --main-font-color: #ffffff;
   --main-link-color: #3672f5;
   --main-border-color: #89888884;
@@ -9,7 +9,7 @@
 
 html,
 body {
-  background: var(--main-bg-color);
+  background: var(--main-background-color);
   color: var(--main-font-color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
