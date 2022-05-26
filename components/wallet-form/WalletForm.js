@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const WalletForm = () => {
   const [openSeaData, setOpenSeaData] = useState();
-  const { account, chainId } = useAccountContext();
+  const { account } = useAccountContext();
 
   const getData = async (info) => {
     const data = { address: info };
@@ -37,7 +37,7 @@ const WalletForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="first">Search NFT names:</label>
+        <label htmlFor="first">Search NFTs:</label>
         <input
           className={styles.input}
           type="text"
@@ -48,9 +48,10 @@ const WalletForm = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <div className={styles.openSeaData}>
-        {openSeaData &&
-          openSeaData.map((asset) => {
+      {openSeaData && (
+        <div className={styles.openSeaData}>
+          <label>Your NFTs:</label>
+          {openSeaData.map((asset) => {
             return (
               <a
                 href={asset.permalink}
@@ -61,7 +62,7 @@ const WalletForm = () => {
               >
                 <div className={styles.nftImage}>
                   <Image
-                    src={asset.image_preview_url}
+                    src={asset.image_url}
                     alt="Picture of the author"
                     width="100%"
                     height="100%"
@@ -74,13 +75,14 @@ const WalletForm = () => {
                 </span>
                 <span className={styles.nftPrice}>
                   {asset.last_sale?.total_price
-                    ? asset.last_sale?.total_price
+                    ? asset.last_sale.total_price / 1e18 // 18 zeros for ETH
                     : "Minted"}
                 </span>
               </a>
             );
           })}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
