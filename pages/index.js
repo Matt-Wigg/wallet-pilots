@@ -13,25 +13,23 @@ const Home = () => {
       <div className={styles.container}>
         <h1>Welcome to Wallet Pilot</h1>
         <p>
-          Wallet Pilot is a community-driven approach to asset and utility
-          management.
+          Wallet Pilot is an asset-governed approach to portfolio management.
         </p>
         <p>
-          Owning one of our 10,000 unique{" "}
+          Owning one of the 10,000 unique{" "}
           <Link href="/pilots">
-            <a>Pilot NTFs(...soon)</a>
+            <a>Pilot NTFS(...soon)</a>
           </Link>
-          , living on the ethereum blockchain, grants you access to{" "}
+          , living on the Ethereum blockchain, grants you access and development
+          dictatorship over{" "}
           <Link href="/the-hanger">
             <a>The Hanger(...soon)</a>
           </Link>
-          : A community-governed portfolio management tool. Pilots also unlock
-          addiontal community channels, future mints, digital utilities, and
-          much more!
+          : A special portfolio management tool. Pilots also unlock other
+          things, depending on when and where they fly(...wen)
         </p>
         <p>
-          Learn more about who we are, what we are doing, and how to get
-          involved on our{" "}
+          There is no Discord and no Twitter, just a{" "}
           <Link href="/map">
             <a>Map(...soon)</a>
           </Link>
