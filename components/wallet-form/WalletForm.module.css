@@ -1,11 +1,22 @@
 .input {
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100%;
   border: 1px solid var(--main-border-color);
   border-radius: 3px;
   background: transparent;
   margin-bottom: 1rem;
+  color: var(--main-font-color);
+  -webkit-box-shadow: 0 0 0 30px var(--main-background-color) inset !important;
+  -webkit-text-fill-color: var(--main-font-color) !important;
+}
+
+.searchNFT {
+  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  background: transparent;
   color: var(--main-font-color);
 }
 

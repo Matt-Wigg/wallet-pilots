@@ -25,11 +25,14 @@ const Home = () => {
           <Link href="/the-hanger">
             <a>The Hanger(...soon)</a>
           </Link>
-          : A special portfolio management tool. Pilots also unlock other
-          things, depending on when and where they fly(...wen)
+          : A special portfolio management tool.
         </p>
         <p>
-          There is no Discord and no Twitter, just a{" "}
+          Pilots also unlock other things, depending on <i>when</i> and{" "}
+          <i>where</i> they fly...
+        </p>
+        <p>
+          There is no Discord or Twitter, just a{" "}
           <Link href="/map">
             <a>Map(...soon)</a>
           </Link>
