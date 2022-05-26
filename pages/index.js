@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
@@ -12,9 +11,7 @@ const Home = () => {
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <div className={styles.container}>
-        <h1>
-          Welcome to Wallet Pilot
-        </h1>
+        <h1>Welcome to Wallet Pilot</h1>
         <p>
           Wallet Pilot is a community-driven approach to asset and utility
           management.

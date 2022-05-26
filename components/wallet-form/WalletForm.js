@@ -1,10 +1,12 @@
+import { useAccountContext } from "../../context/account";
 import { useState } from "react";
 import styles from "./WalletForm.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
-const WalletForm = ({ account }) => {
+const WalletForm = () => {
   const [openSeaData, setOpenSeaData] = useState();
+  const { account, chainId } = useAccountContext();
 
   const getData = async (info) => {
     const data = { address: info };

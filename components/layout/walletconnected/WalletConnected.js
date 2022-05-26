@@ -1,8 +1,8 @@
-import { useWeb3React } from "@web3-react/core";
+import { useAccountContext } from "../../../context/account";
 import styles from "./WalletConnected.module.css";
 
 const WalletConnected = ({ modal }) => {
-  const { account, chainId } = useWeb3React();
+  const { account, chainId } = useAccountContext();
 
   const handleClick = () => {
     modal(true);
