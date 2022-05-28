@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const WalletForm = () => {
   const [openSeaData, setOpenSeaData] = useState();
+  const [error, setError] = useState(false);
   const { account } = useAccountContext();
 
   const getData = async (info) => {
@@ -21,11 +22,16 @@ const WalletForm = () => {
     };
     const response = await fetch(endpoint, options);
     const dataStream = await response.json();
-    setOpenSeaData(dataStream.assets);
+    if (dataStream?.owner) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+    setOpenSeaData(dataStream);
   };
 
   useEffect(() => {
-    getData(account);
+    if (account) getData(account);
   }, [account]);
 
   const handleSubmit = async (event) => {
@@ -37,7 +43,9 @@ const WalletForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label className={styles.searchNFT} htmlFor="first">Search NFTs:</label>
+        <label className={styles.searchNFT} htmlFor="first">
+          Search NFTs:
+        </label>
         <input
           className={styles.input}
           type="text"
@@ -48,10 +56,15 @@ const WalletForm = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      {openSeaData && (
+      {error && (
+        <div className={styles.error}>
+          Please enter a valid address. ENS is not currently supported.
+        </div>
+      )}
+      {openSeaData?.assets && (
         <div className={styles.openSeaData}>
           <label>Your NFTs:</label>
-          {openSeaData.map((asset) => {
+          {openSeaData.assets.map((asset) => {
             return (
               <a
                 href={asset.permalink}
