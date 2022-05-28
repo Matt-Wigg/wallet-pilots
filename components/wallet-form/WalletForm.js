@@ -62,8 +62,8 @@ const WalletForm = () => {
               >
                 <div className={styles.nftImage}>
                   <Image
-                    src={asset.image_url}
-                    alt="Picture of the author"
+                    src={asset.image_preview_url}
+                    alt={asset.name}
                     width="100%"
                     height="100%"
                     layout="responsive"
