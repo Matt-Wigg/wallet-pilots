@@ -69,6 +69,7 @@
   right: 2rem;
   max-width: 300px;
   background-color: var(--main-background-color);
+  box-shadow: var(--main-box-shadow);
 }
 
 /* mobile */
@@ -81,5 +82,8 @@
   .error {
     top: 1rem;
     right: 1rem;
+    max-width: 210px;
+    font-size: x-small;
+    padding: 0.5rem;
   }
 }
