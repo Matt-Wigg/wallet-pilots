@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import WalletForm from "../components/wallet-form/WalletForm";
+import NFTSearch from "../components/NFTSearch/NFTSearch";
 
 const Hanger = () => {
   return (
@@ -11,7 +11,7 @@ const Hanger = () => {
         <link rel="icon" href="/pilot.svg" />
       </Head>
       <h1>The Hanger:</h1>
-      <WalletForm />
+      <NFTSearch />
     </div>
   );
 };
