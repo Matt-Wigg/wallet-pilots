@@ -1,10 +1,10 @@
 import { useAccountContext } from "../../context/account";
 import { useState } from "react";
-import styles from "./WalletForm.module.css";
+import styles from "./NFTSearch.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
-const WalletForm = () => {
+const NFTSearch = () => {
   const [openSeaData, setOpenSeaData] = useState();
   const [error, setError] = useState(false);
   const { account } = useAccountContext();
@@ -40,6 +40,11 @@ const WalletForm = () => {
     getData(accountToSearch);
   };
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    setError(false);
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -57,8 +62,11 @@ const WalletForm = () => {
         <button type="submit">Submit</button>
       </form>
       {error && (
-        <div className={styles.error}>
-          Please enter a valid address. ENS is not currently supported.
+        <div className={styles.errorContainer}>
+          <div className={styles.errorMessage}>
+            Please enter a valid address. ENS is not currently supported.
+          </div>
+          <button onClick={(e)=> handleClick(e)}className={styles.errorClose}>x</button>
         </div>
       )}
       {openSeaData?.assets && (
@@ -100,4 +108,4 @@ const WalletForm = () => {
   );
 };
 
-export default WalletForm;
+export default NFTSearch;
