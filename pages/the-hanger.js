@@ -1,6 +1,6 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import NFTSearch from "../components/NFTSearch/NFTSearch";
+import styles from "../styles/Home.module.css";
 
 const Hanger = () => {
   return (

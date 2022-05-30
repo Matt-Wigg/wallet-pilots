@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async function retrieveAssets(req, res) {
   const {
     body: { address },
   } = req;

@@ -4,6 +4,8 @@ import styles from "./NFTSearch.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
+import AccountOverview from "../AccountOverview/AccountOverview";
+
 const NFTSearch = () => {
   const [openSeaData, setOpenSeaData] = useState();
   const [error, setError] = useState(false);
@@ -12,7 +14,7 @@ const NFTSearch = () => {
   const getData = async (info) => {
     const data = { address: info };
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/opensea-test";
+    const endpoint = "/api/opensea/retrieve-assets";
     const options = {
       method: "POST",
       headers: {
@@ -43,7 +45,7 @@ const NFTSearch = () => {
   const handleClick = (event) => {
     event.preventDefault();
     setError(false);
-  }
+  };
 
   return (
     <div>
@@ -66,12 +68,14 @@ const NFTSearch = () => {
           <div className={styles.errorMessage}>
             Please enter a valid address. ENS is not currently supported.
           </div>
-          <button onClick={(e)=> handleClick(e)}className={styles.errorClose}>x</button>
+          <button onClick={(e) => handleClick(e)} className={styles.errorClose}>
+            x
+          </button>
         </div>
       )}
       {openSeaData?.assets && (
         <div className={styles.openSeaData}>
-          <label>Your NFTs:</label>
+          <AccountOverview />
           {openSeaData.assets.map((asset) => {
             return (
               <a
