@@ -71,6 +71,15 @@ const Nav = ({ modal }) => {
             Map
           </button>
         </Link>
+        <Link href="/prices" passHref>
+          <button
+            className={
+              router.pathname === "/prices" ? style.activeFocus : style.active
+            }
+          >
+            Prices
+          </button>
+        </Link>
     </nav>
   );
 };
