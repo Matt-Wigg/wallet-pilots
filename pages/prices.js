@@ -1,5 +1,5 @@
 export async function getStaticProps(context) {
-  const endpoint = "http://localhost:3000/api/coinmarket/get-current-prices";
+  const endpoint = "http://walletpilot.net/api/coinmarket/get-current-prices";
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
