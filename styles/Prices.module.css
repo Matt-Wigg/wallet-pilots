@@ -1,0 +1,22 @@
+.priceContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-flow: row;
+  flex-wrap: wrap;
+  max-width: 50vw;
+}
+
+.prices {
+  border: 1px solid var(--main-border-color);
+  border-radius: 3px;
+  box-shadow: var(--main-box-shadow);
+  padding: 2rem;
+  min-width: 100px;
+}
+
+/* mobile */
+@media only screen and (max-width: 800px) {
+  .container {
+    max-width: none;
+  }
+}

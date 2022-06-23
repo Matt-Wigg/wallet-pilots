@@ -1,21 +1,28 @@
+import styles from '../styles/Prices.module.css';
+
 export async function getServerSideProps(context) {
-  const endpoint = "http://walletpilot.net/api/coinmarket/get-current-prices";
+  const endpoint = "http://localhost:3000/api/coinmarket/get-current-prices";
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
   };
   const response = await fetch(endpoint, options);
-  const dataStream = await response.json();
+  const prices = await response.json();
   return {
-    props: { dataStream }, // will be passed to the page component as props
+    props: { prices },
   };
 }
 
-const Prices = ({ dataStream }) => {
+const Prices = ({ prices }) => {
   return (
-    <div>
-      {dataStream.map((data) => {
-        return <div key={data.id}>{data.name} : {Math.round(data.quote.USD.price)}</div>;
+    <div className={styles.priceContainer}>
+      {prices.map((price, index) => {
+        return (
+          <div className={styles.prices} key={price.id}>
+            {index + 1}.{" "}{price.name}:{" "}
+            ${price.quote.USD.price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </div>  // rounds to two decimals: USD and add comma seperators
+        );
       })}
     </div>
   );
