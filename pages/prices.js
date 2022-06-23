@@ -1,7 +1,10 @@
-import styles from '../styles/Prices.module.css';
+import styles from "../styles/Prices.module.css";
 
-export async function getServerSideProps(context) {
-  const endpoint = "http://localhost:3000/api/coinmarket/get-current-prices";
+export async function getServerSideProps({ req }) {
+  const endpoint =
+    req.headers.host === "localhost:3000"
+      ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
+      : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -19,9 +22,12 @@ const Prices = ({ prices }) => {
       {prices.map((price, index) => {
         return (
           <div className={styles.prices} key={price.id}>
-            {index + 1}.{" "}{price.name}:{" "}
-            ${price.quote.USD.price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-          </div>  // rounds to two decimals: USD and add comma seperators
+            {index + 1}. {price.name}: $
+            {price.quote.USD.price
+              .toFixed(2)
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </div> // rounds to two decimals: USD and add comma seperators
         );
       })}
     </div>
