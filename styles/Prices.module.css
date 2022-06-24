@@ -12,6 +12,7 @@
   box-shadow: var(--main-box-shadow);
   padding: 2rem;
   min-width: 100px;
+  margin: 0 1rem 1rem 0;
 }
 
 /* mobile */
