@@ -1,6 +1,5 @@
 import { useAccountContext } from "../../context/account";
 import { useState } from "react";
-import Image from "next/image";
 import { useEffect } from "react";
 
 const AccountOverview = () => {
@@ -32,23 +31,20 @@ const AccountOverview = () => {
   const calculateTotalSpend = () => {
     let sum = 0;
     openSeaData.assets?.forEach((asset) => {
-      if (parseInt(asset.last_sale?.total_price)) sum += parseInt(asset.last_sale?.total_price) / 1e18;
-    })
+      if (parseInt(asset.last_sale?.total_price))
+        sum += parseInt(asset.last_sale?.total_price) / 1e18;
+    });
     return sum;
-  }
+  };
 
   useEffect(() => {
     if (account) getData(account);
   }, [account]);
 
   return (
-    <>
-      {account && (
-        <div>
-          50 most recent spend:{" "}{calculateTotalSpend()}
-        </div>
-      )}
-    </>
+    <div style={{ paddingBottom: "1rem" }}>
+      {account && <div>Your 50 most recent NFT spend total: {calculateTotalSpend()} ETH</div>}
+    </div>
   );
 };
 

@@ -1,10 +1,10 @@
 import styles from "../styles/Prices.module.css";
 
-export async function getServerSideProps({ req }) {
-  const endpoint =
-    req.headers.host === "localhost:3000"
-      ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
-      : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
+export async function getStaticProps({ req }) {
+  const endpoint = 'https://walletpilot.net/api/coinmarket/get-current-prices'
+    // req.headers.host === "localhost:3000"
+    //   ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
+    //   : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
