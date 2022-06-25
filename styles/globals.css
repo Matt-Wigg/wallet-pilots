@@ -59,6 +59,7 @@ button {
   font: inherit;
   outline: inherit;
   padding: 0.25rem;
+  min-height: 40px;
   width: 100%;
 }
 
