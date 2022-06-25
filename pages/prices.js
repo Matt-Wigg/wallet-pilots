@@ -1,6 +1,6 @@
 import styles from "../styles/Prices.module.css";
 
-export async function getStaticProps({ req }) {
+export async function getServerSideProps({ req, res }) {
   const endpoint = 'https://walletpilot.net/api/coinmarket/get-current-prices'
     // req.headers.host === "localhost:3000"
     //   ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
