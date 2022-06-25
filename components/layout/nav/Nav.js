@@ -13,7 +13,7 @@ const Nav = ({ modal }) => {
   const router = useRouter();
 
   const handleConnect = (e) => {
-    setIsLoading(true);
+    modal(true);
     e.preventDefault();
   };
 
@@ -25,12 +25,11 @@ const Nav = ({ modal }) => {
 
   const handleClick = (e) => {
     setIsLoading(true);
-    // e.preventDefault()
   };
 
   const handleRouteChange = () => {
     setIsLoading(false);
-  }
+  };
 
   useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
