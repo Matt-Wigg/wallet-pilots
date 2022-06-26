@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useAccountContext } from "../../context/account";
 import { useState } from "react";
 import styles from "./NFTSearch.module.css";
@@ -86,13 +87,11 @@ const NFTSearch = () => {
                 rel="noopener noreferrer"
               >
                 <div className={styles.nftImage}>
-                  <Image
+                  <img
                     src={asset.image_preview_url}
                     alt={asset.name}
                     width="100%"
                     height="100%"
-                    layout="responsive"
-                    objectFit="contain"
                   />
                 </div>
                 <span className={styles.nftName}>
