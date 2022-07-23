@@ -1,7 +1,6 @@
+// add infura keys & etherscan options 
 export default async function retrieveAssets(req, res) {
-  const {
-    body: { address },
-  } = req;
+  const { body: { address } } = req;
   const options = {
     method: "GET",
     headers: {

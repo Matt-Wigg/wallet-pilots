@@ -15,7 +15,7 @@ export default function Modal({ modal }) {
     modal(false);
     e.preventDefault();
   };
-
+  // TODO: Ewww 
   return (
     <div className={style.backgroundBlur}>
       <div className={style.modal}>
