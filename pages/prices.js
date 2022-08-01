@@ -7,13 +7,12 @@ export async function getServerSideProps({ req, res }) {
   //   : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
   const options = {
     method: "GET",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json" }
   };
   const response = await fetch(endpoint, options);
-  console.log(response);
   const prices = await response.json();
   return {
-    props: { prices },
+    props: { prices }
   };
 }
 

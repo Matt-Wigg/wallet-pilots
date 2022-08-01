@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-right:0.8rem;
+  padding-right: 0.8rem;
 }
 
 .playerButton {
@@ -146,52 +146,6 @@
 @media only screen and (max-width: 800px) {
   .auioContainer {
     width: fit-content;
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    margin: 0 auto;
-    position: -webkit-sticky;
-    bottom: 3.5rem;
-    right: 0;
-    left: 0;
-    min-width: auto;
-    z-index: 100 !important;
-    background-color: rgba(14, 30, 49, 0.23);
-  }
-  .audioTitle {
     display: none;
-  }
-
-  .audioSubTitle {
-    display: none;
-  }
-
-  .trackInfo {
-    display: none;
-  }
-
-  .musicVisual {
-    position: relative;
-    display: none;
-    justify-content: space-between;
-    width: 2rem;
-    height: 1.5rem;
-    align-items: flex-end;
-  }
-
-  .playButton {
-    height: 2rem;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .nextButtonActive {
-    height: 2rem;
-    transition: all 0.2s ease-in-out;
-  }
-  .buttonContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding:0;
   }
 }
