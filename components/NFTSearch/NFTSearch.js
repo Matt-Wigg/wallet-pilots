@@ -2,7 +2,6 @@
 import { useAccountContext } from "../../context/account";
 import { useState } from "react";
 import styles from "./NFTSearch.module.css";
-import Image from "next/image";
 import { useEffect } from "react";
 
 import AccountOverview from "../AccountOverview/AccountOverview";
@@ -12,6 +11,8 @@ const NFTSearch = () => {
   const [error, setError] = useState(false);
   const { account } = useAccountContext();
 
+
+  // TODO: Move to hooks
   const getData = async (info) => {
     const data = { address: info };
     const JSONdata = JSON.stringify(data);
@@ -48,6 +49,7 @@ const NFTSearch = () => {
     setError(false);
   };
 
+  //TODO: Break this out
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -91,7 +93,7 @@ const NFTSearch = () => {
                     src={asset.image_preview_url}
                     alt={asset.name}
                     width="100%"
-                    height="100%"
+                    height="auto"
                   />
                 </div>
                 <span className={styles.nftName}>

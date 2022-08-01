@@ -101,7 +101,7 @@ const Nav = ({ modal }) => {
 };
 
 Nav.propTypes = {
-  modal: propTypes.func,
+  modal: propTypes.func, // TODO: Break out object
 };
 
 export default Nav;

@@ -1,4 +1,5 @@
-import Layout from "../components/layout/layout";
+// TODO: Cap components 
+import Layout from "../components/Layout/layout";
 import { AccountWrapper } from "../context/account";
 import { Web3Provider } from "@ethersproject/providers";
 import { Web3ReactProvider } from "@web3-react/core";
