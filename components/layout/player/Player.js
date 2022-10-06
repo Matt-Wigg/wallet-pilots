@@ -1,19 +1,19 @@
-import { useState, useEffect, useRef } from "react";
-import style from "./Player.module.css";
+import { useState, useEffect, useRef } from 'react';
+import style from './Player.module.css';
 
-import tracks from "./tracks";
+import tracks from './tracks';
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
 
-  const { id, artist, title, source } = tracks[currentTrack];
-  const audioRef = useRef(typeof Audio !== "undefined" && new Audio(source));
+  const { artist, title, source } = tracks[currentTrack];
+  const audioRef = useRef(typeof Audio !== 'undefined' && new Audio(source));
+  const intervalRef = useRef();
 
   const togglePlayPause = () => {
-    const prevValue = isPlaying;
-    setIsPlaying(!prevValue);
-    if (!prevValue) {
+    setIsPlaying(!isPlaying);
+    if (!isPlaying) {
       audioRef.current.play();
     } else {
       audioRef.current.pause();
@@ -26,18 +26,31 @@ const AudioPlayer = () => {
     } else {
       setCurrentTrack(currentTrack - 1);
     }
+    if (!isPlaying) setIsPlaying(true);
   };
 
-  const nextSong = (e) => {
+  const nextSong = () => {
     if (currentTrack === tracks.length - 1) setCurrentTrack(0);
     else setCurrentTrack(currentTrack + 1);
-    e.preventDefault();
+    if (!isPlaying) setIsPlaying(true);
+  };
+
+  const startTimer = () => {
+    // Clear any timers already running
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      if (audioRef.current.ended) nextSong();
+    }, [1000]);
   };
 
   useEffect(() => {
-    if (isPlaying) audioRef.current.play();
-    else audioRef.current.pause();
-  }, [isPlaying]);
+    if (isPlaying) {
+      audioRef.current.play();
+      startTimer();
+    } else {
+      audioRef.current.pause();
+    }
+  });
 
   useEffect(() => {
     audioRef.current.pause();
@@ -46,7 +59,7 @@ const AudioPlayer = () => {
       audioRef.current.play();
       setIsPlaying(true);
     }
-  }, [currentTrack]);
+  }, [currentTrack, isPlaying, source]);
 
   return (
     <div className={style.auioContainer}>
@@ -66,15 +79,15 @@ const AudioPlayer = () => {
         <div className={style.buttonContainer}>
           <button className={style.playerButton} onClick={restartAndPrevious}>
             <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 24 24"
-              height="100%"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
+              stroke='currentColor'
+              fill='currentColor'
+              strokeWidth='0'
+              viewBox='0 0 24 24'
+              height='100%'
+              width='100%'
+              xmlns='http://www.w3.org/2000/svg'
             >
-              <path d="m16 7-7 5 7 5zm-7 5V7H7v10h2z"></path>
+              <path d='m16 7-7 5 7 5zm-7 5V7H7v10h2z'></path>
             </svg>
           </button>
           <button
@@ -82,30 +95,30 @@ const AudioPlayer = () => {
             onClick={togglePlayPause}
           >
             <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 24 24"
-              height="100%"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
+              stroke='currentColor'
+              fill='currentColor'
+              strokeWidth='0'
+              viewBox='0 0 24 24'
+              height='100%'
+              width='100%'
+              xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                d={isPlaying ? "M8 7h3v10H8zm5 0h3v10h-3z" : "M7 6v12l10-6z"}
+                d={isPlaying ? 'M8 7h3v10H8zm5 0h3v10h-3z' : 'M7 6v12l10-6z'}
               ></path>
             </svg>
           </button>
           <button className={style.playerButton} onClick={(e) => nextSong(e)}>
             <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 24 24"
-              height="100%"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
+              stroke='currentColor'
+              fill='currentColor'
+              strokeWidth='0'
+              viewBox='0 0 24 24'
+              height='100%'
+              width='100%'
+              xmlns='http://www.w3.org/2000/svg'
             >
-              <path d="M7 7v10l7-5zm9 10V7h-2v10z"></path>
+              <path d='M7 7v10l7-5zm9 10V7h-2v10z'></path>
             </svg>
           </button>
         </div>

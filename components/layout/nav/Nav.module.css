@@ -53,6 +53,7 @@
 
 .activeFocus {
   background-color: var(--main-link-color);
+  color: var(--white);
   margin-bottom: 1rem;
 }
 
@@ -62,10 +63,13 @@
 }
 
 .disconnect {
-  background-color: var(--main-link-color);
+  background-color: var(--main-border-color);
+  color: var(--white);
   margin-bottom: 2rem;
 }
 
 .connect {
   margin-bottom: 2rem;
+  background-color: var(--second-link-color);
+  color: var(--white);
 }

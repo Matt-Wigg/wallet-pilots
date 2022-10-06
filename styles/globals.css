@@ -1,10 +1,12 @@
 :root {
   --main-background-color: #191713;
   --main-font-color: #999795;
-  --main-link-color: #ff8a00;
+  --main-link-color: #ffaf33;
   --main-border-color: #514f4d;
   --main-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --second-link-color: #ff8a00;
+  --white: #fff;
 }
 
 html,
@@ -52,7 +54,7 @@ a:hover {
 button {
   background: none;
   border: 0.5px solid var(--main-border-color);
-  border-radius: 3px;
+  border-radius: 0.5rem;
   box-shadow: var(--main-box-shadow);
   color: inherit;
   cursor: pointer;
@@ -61,14 +63,15 @@ button {
   padding: 0.25rem;
   min-height: 40px;
   width: 100%;
-  color: #fff;
 }
 
 button:focus {
   background-color: var(--main-link-color);
   outline: auto;
+  color: var(--white);
 }
 
 button:hover {
   background-color: var(--main-link-color);
+  color: var(--white);
 }
