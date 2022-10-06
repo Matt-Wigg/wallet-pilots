@@ -1,18 +1,18 @@
-import styles from "../styles/Prices.module.css";
+import styles from '../styles/Prices.module.css';
 
 export async function getServerSideProps({ req, res }) {
-  const endpoint = "https://walletpilot.net/api/coinmarket/get-current-prices";
-  // req.headers.host === "localhost:3000"
-  //   ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
-  //   : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
+  const endpoint =
+    req.headers.host === 'localhost:3000'
+      ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
+      : `https://${req.headers.host}/api/coinmarket/get-current-prices`;
   const options = {
-    method: "GET",
-    headers: { "Content-Type": "application/json" }
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
   };
   const response = await fetch(endpoint, options);
   const prices = await response.json();
   return {
-    props: { prices }
+    props: { prices },
   };
 }
 
@@ -26,7 +26,7 @@ const Prices = ({ prices }) => {
             {price.quote.USD.price
               .toFixed(2)
               .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </div> // rounds to two decimals: USD and add comma seperators
         );
       })}
