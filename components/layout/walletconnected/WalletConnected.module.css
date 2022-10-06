@@ -1,6 +1,6 @@
 .main {
   max-width: 50vw;
-  border: 1px solid rgba(137, 136, 136, 0.517);
+  border: 0.5px solid rgba(137, 136, 136, 0.517);
   padding: 2rem;
   border-radius: 3px;
   margin-top: 2rem;
@@ -8,15 +8,15 @@
 }
 
 .ethereumDetail {
-  color: #3673f5;
+  color: var(--main-link-color);
 }
 
 .ethereumAddress {
-  border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+  border-bottom: 0.5px solid rgba(137, 136, 136, 0.517);
 }
 
 .ethereumContainer {
-  border-bottom: 1px solid rgba(137, 136, 136, 0.517);
+  border-bottom: 0.5px solid rgba(137, 136, 136, 0.517);
   padding-top: 1rem;
 }
 

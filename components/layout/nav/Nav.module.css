@@ -1,5 +1,5 @@
 .navbar {
-  border-right: 1px solid rgba(137, 136, 136, 0.517);
+  border-right: 0.5px solid var(--main-border-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -12,19 +12,18 @@
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0 auto;
-  color: #fff;
   overflow: hidden;
   max-width: 250px;
   min-width: 250px;
   align-items: center;
   z-index: 1;
-  background-color: #020610;;
+  background-color: var(--main-background-color);
 }
 
 @media only screen and (max-width: 800px) {
   .navbar {
     position: relative;
-    border-top: 1px solid rgba(137, 136, 136, 0.517);
+    border-top: 0.5px solid var(--main-border-color);
     max-width: 100%;
     border-right: 0;
     margin: 0;
@@ -45,7 +44,7 @@
 }
 
 .inactiveButton:hover {
-  background-color: rgba(137, 136, 136, 0.517);
+  background-color: var(--main-border-color);
 }
 
 .active {
@@ -53,7 +52,7 @@
 }
 
 .activeFocus {
-  background-color: #3673f5;
+  background-color: var(--main-link-color);
   margin-bottom: 1rem;
 }
 
@@ -63,7 +62,7 @@
 }
 
 .disconnect {
-  background-color: #3673f5;
+  background-color: var(--main-link-color);
   margin-bottom: 2rem;
 }
 

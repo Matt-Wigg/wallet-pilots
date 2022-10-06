@@ -1,8 +1,8 @@
 :root {
-  --main-background-color: #020610;
-  --main-font-color: #ffffff;
-  --main-link-color: #3672f5;
-  --main-border-color: #89888884;
+  --main-background-color: #191713;
+  --main-font-color: #999795;
+  --main-link-color: #ff8a00;
+  --main-border-color: #514f4d;
   --main-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -51,7 +51,7 @@ a:hover {
 
 button {
   background: none;
-  border: 1px solid var(--main-border-color);
+  border: 0.5px solid var(--main-border-color);
   border-radius: 3px;
   box-shadow: var(--main-box-shadow);
   color: inherit;
@@ -61,6 +61,7 @@ button {
   padding: 0.25rem;
   min-height: 40px;
   width: 100%;
+  color: #fff;
 }
 
 button:focus {
