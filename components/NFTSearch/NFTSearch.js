@@ -1,26 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
-import { useAccountContext } from "../../context/account";
-import { useState } from "react";
-import styles from "./NFTSearch.module.css";
-import { useEffect } from "react";
+import { useAccountContext } from '../../context/account';
+import { useState } from 'react';
+import styles from './NFTSearch.module.css';
+import { useEffect } from 'react';
 
-import AccountOverview from "../AccountOverview/AccountOverview";
+import AccountOverview from '../AccountOverview/AccountOverview';
 
 const NFTSearch = () => {
   const [openSeaData, setOpenSeaData] = useState();
   const [error, setError] = useState(false);
   const { account } = useAccountContext();
 
-
   // TODO: Move to hooks
   const getData = async (info) => {
     const data = { address: info };
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/opensea/retrieve-assets";
+    const endpoint = '/api/opensea/retrieve-assets';
     const options = {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSONdata,
     };
@@ -28,6 +27,9 @@ const NFTSearch = () => {
     const dataStream = await response.json();
     if (dataStream?.owner) {
       setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, [5000]);
     } else {
       setError(false);
     }
@@ -53,18 +55,18 @@ const NFTSearch = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label className={styles.searchNFT} htmlFor="first">
+        <label className={styles.searchNFT} htmlFor='first'>
           Search NFTs:
         </label>
         <input
           className={styles.input}
-          type="text"
-          id="address"
-          name="address"
-          placeholder={"Enter wallet address..."}
+          type='text'
+          id='address'
+          name='address'
+          placeholder={'Enter wallet address...'}
           required
         />
-        <button type="submit">Submit</button>
+        <button type='submit'>Submit</button>
       </form>
       {error && (
         <div className={styles.errorContainer}>
@@ -85,24 +87,24 @@ const NFTSearch = () => {
                 href={asset.permalink}
                 key={asset.id}
                 className={styles.nftInfo}
-                target="_blank"
-                rel="noopener noreferrer"
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <div className={styles.nftImage}>
                   <img
                     src={asset.image_preview_url}
                     alt={asset.name}
-                    width="100%"
-                    height="auto"
+                    width='100%'
+                    height='auto'
                   />
                 </div>
                 <span className={styles.nftName}>
-                  {asset.name || "#" + asset.token_id}
+                  {asset.name || '#' + asset.token_id}
                 </span>
                 <span className={styles.nftPrice}>
                   {asset.last_sale?.total_price
                     ? asset.last_sale.total_price / 1e18 // 18 zeros for ETH
-                    : "Minted"}
+                    : 'Minted'}
                 </span>
               </a>
             );
