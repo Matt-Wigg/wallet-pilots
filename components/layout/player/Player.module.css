@@ -71,7 +71,7 @@
   flex-direction: row;
   margin: 5px;
   background-color: var(--main-link-color);
-  color: #fff;
+  color: var(--main-background-color);
 }
 
 @keyframes bounce {
