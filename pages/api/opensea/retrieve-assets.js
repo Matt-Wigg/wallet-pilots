@@ -13,7 +13,6 @@ export default async function retrieveAssets(req, res) {
     options
   )
     .then((response) => response.json())
-    .then((response) => response)
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err)); // Do something
   res.send(data);
 }

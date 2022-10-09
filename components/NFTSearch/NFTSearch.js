@@ -12,16 +12,16 @@ const NFTSearch = () => {
   const { account } = useAccountContext();
 
   // TODO: Move to hooks
-  const getData = async (info) => {
-    const data = { address: info };
-    const JSONdata = JSON.stringify(data);
+  const getData = async (address) => {
+    const data = JSON.stringify({ address });
+    // const JSONdata = JSON.stringify(data);
     const endpoint = '/api/opensea/retrieve-assets';
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSONdata,
+      body: data,
     };
     const response = await fetch(endpoint, options);
     const dataStream = await response.json();
