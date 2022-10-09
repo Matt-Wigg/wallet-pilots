@@ -22,7 +22,7 @@ const injected = new InjectedConnector({ supportedChainIds: [1, 4, 5, 42] });
 const connectors = {
   walletConnect,
   coinbaseWallet,
-  injected, 
+  injected,
 };
 
 export default connectors;
