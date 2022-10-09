@@ -1,8 +1,8 @@
 import styles from '../styles/Prices.module.css';
 // swap to SWR https://swr.vercel.app/docs/getting-started
 export async function getServerSideProps({ req, res }) {
-  if (req.method == "OPTIONS") {
-    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+  if (req.method == 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
     return res.status(200).json({});
   }
   const endpoint =
@@ -25,8 +25,8 @@ export async function getServerSideProps({ req, res }) {
   } catch (error) {
     console.log(error);
     return {
-      props: error
-    }
+      props: error,
+    };
   }
 }
 
