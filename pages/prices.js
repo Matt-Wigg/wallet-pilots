@@ -12,11 +12,18 @@ export async function getServerSideProps({ req, res }) {
       'Access-Control-Allow-Origin': '*',
     },
   };
-  const response = await fetch(endpoint, options);
-  const prices = await response.json();
-  return {
-    props: { prices },
-  };
+  try {
+    const response = await fetch(endpoint, options);
+    const prices = await response.json();
+    return {
+      props: { prices },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: error
+    }
+  }
 }
 
 const Prices = ({ prices }) => {
