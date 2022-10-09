@@ -26,9 +26,10 @@ export async function getServerSideProps({ req, res }) {
   }
 }
 
-const Prices = ({ prices }) => {
+const Prices = ({ prices, error }) => {
   return (
     <div className={styles.priceContainer}>
+      {error && console.log(erorr)}
       {prices.map((price, index) => {
         return (
           <div className={styles.prices} key={price.id}>
