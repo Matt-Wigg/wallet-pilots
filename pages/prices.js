@@ -1,6 +1,10 @@
 import styles from '../styles/Prices.module.css';
 
 export async function getServerSideProps({ req, res }) {
+  if (req.method == "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+    return res.status(200).json({});
+  }
   const endpoint =
     req.headers.host === 'localhost:3000'
       ? `http://${req.headers.host}/api/coinmarket/get-current-prices`
