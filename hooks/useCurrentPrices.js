@@ -1,7 +1,7 @@
 import fetcher from './fetcher';
 import useSWR from 'swr';
 
-const useCurrentPrices = (id) => {
+const useCurrentPrices = () => {
   const { data, error } = useSWR(`api/coinmarket/get-current-prices`, fetcher);
 
   return {
