@@ -18,7 +18,7 @@
   align-items: center;
   z-index: 1;
   background-color: var(--main-background-color);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 800px) {

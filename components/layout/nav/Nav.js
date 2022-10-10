@@ -41,8 +41,14 @@ const Nav = ({ modal }) => {
 
   return (
     <nav className={style.navbar}>
-      <div style={{paddingBottom: 1 + 'rem'}}>
-        <Image src='/logo.png' height='300' width='400'/>
+      <div style={{ paddingBottom: 1 + 'rem' }}>
+        <Image
+          src='/logo.png'
+          height='300'
+          width='400'
+          alt='wallet pilot logo'
+          priority={true}
+        />
       </div>
       {!active && (
         <button onClick={(e) => handleConnect(e)} className={style.connect}>
