@@ -48,6 +48,7 @@ const Nav = ({ modal }) => {
           width='400'
           alt='wallet pilot logo'
           priority={true}
+          loading="eager"
         />
       </div>
       {!active && (
