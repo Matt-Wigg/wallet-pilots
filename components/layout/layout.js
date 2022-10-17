@@ -7,7 +7,6 @@ import Nav from "./nav/Nav";
 import Modal from "./modal/Modal";
 import Player from "./player/Player";
 import Footer from "./footer/Footer";
-import WalletConnected from "./walletconnected/WalletConnected";
 
 const Layout = ({ children }) => {
   const [modal, setmodal] = useState(false);
@@ -26,7 +25,6 @@ const Layout = ({ children }) => {
       >
         <main className={styles.main}>
           {children}
-          <WalletConnected modal={setmodal} />
         </main>
         <Nav modal={setmodal} />
         <Player />

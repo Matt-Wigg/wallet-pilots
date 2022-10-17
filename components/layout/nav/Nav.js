@@ -24,21 +24,6 @@ const Nav = ({ modal }) => {
     e.preventDefault();
   };
 
-  const handleClick = (e) => {
-    setIsLoading(true);
-  };
-
-  const handleRouteChange = () => {
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
-
   return (
     <nav className={style.navbar}>
       <div style={{ paddingBottom: 1 + 'rem' }}>
@@ -48,7 +33,7 @@ const Nav = ({ modal }) => {
           width='400'
           alt='wallet pilot logo'
           priority={true}
-          loading="eager"
+          loading='eager'
         />
       </div>
       {!active && (
@@ -70,6 +55,15 @@ const Nav = ({ modal }) => {
           Home
         </button>
       </Link>
+      <Link href='/prices' passHref>
+        <button
+          className={
+            router.pathname === '/prices' ? style.activeFocus : style.active
+          }
+        >
+          {isLoading ? <LoadingSpinner /> : 'Prices'}
+        </button>
+      </Link>
       <Link href='/the-hanger' passHref>
         <button
           className={
@@ -85,7 +79,7 @@ const Nav = ({ modal }) => {
             router.pathname === '/pilots' ? style.activeFocus : style.active
           }
         >
-          Pilots
+          Pilots (soon)
         </button>
       </Link>
       <Link href='/map' passHref>
@@ -94,17 +88,7 @@ const Nav = ({ modal }) => {
             router.pathname === '/map' ? style.activeFocus : style.active
           }
         >
-          Map
-        </button>
-      </Link>
-      <Link href='/prices' passHref>
-        <button
-          className={
-            router.pathname === '/prices' ? style.activeFocus : style.active
-          }
-          onClick={handleClick}
-        >
-          {isLoading ? <LoadingSpinner /> : 'Prices'}
+          Map (soon)
         </button>
       </Link>
     </nav>
