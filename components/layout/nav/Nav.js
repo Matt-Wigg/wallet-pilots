@@ -44,7 +44,7 @@ const Nav = ({ modal }) => {
       <div style={{ paddingBottom: 1 + 'rem' }}>
         <Image
           src='/pilot-logo.png'
-          height='300'
+          height='200'
           width='400'
           alt='wallet pilot logo'
           priority={true}
