@@ -43,7 +43,7 @@ const Nav = ({ modal }) => {
     <nav className={style.navbar}>
       <div style={{ paddingBottom: 1 + 'rem' }}>
         <Image
-          src='/logo.png'
+          src='/pilot-logo.png'
           height='300'
           width='400'
           alt='wallet pilot logo'
